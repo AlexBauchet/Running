@@ -1,5 +1,5 @@
 <footer>
 
-	<p>&copy; Company 2015</p>
+	<p>&copy; 2016 Running</p>
 
 </footer>

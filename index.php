@@ -36,33 +36,22 @@
 	<?php include(__DIR__.'/include/header.php'); ?>
 
 
+	<!-- MAIN CONTENT -->
+
     <!-- Main jumbotron for a primary marketing message or call to action -->
 	<div class="jumbotron">
 		<div class="container">
-			<h1>Hello, world!</h1>
-			<p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+			<h1>Slideshow ou Film de runners</h1>
+			<p>Insérer une video ou des photos sur le slidshow.</p>
 			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
 		</div>
 	</div>
 
 	<div class="container">
-		<!-- Example row of columns -->
 		<div class="row">
-			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-			</div>
-			
-			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-			</div>
-
-			<div class="col-md-4">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+			<div class="col-md-12">
+				<h2>Google Maps</h2>
+				<p>Insérer une photo google maps non intéractive ?</p>
 				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 			</div>
 		</div>
@@ -74,7 +63,7 @@
 		<?php include(__DIR__.'/include/footer.php'); ?>
 
 
-</div> <!-- /container -->        
+	</div> <!-- /container -->        
 
 	
 	<!-- SCRIPTS -->
@@ -85,6 +74,6 @@
 	<script src="js/vendor/bootstrap.min.js"></script>
 
 	<script src="js/main.js"></script>
-	
+
 </body>
 </html>
