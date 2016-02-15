@@ -15,6 +15,11 @@
 100% { left: -400%; }
 }
 
+body {
+
+	background: url(../img/Melamine-wood-003.png);
+}
+
 
 body { margin: 0; } 
 #slider { overflow: hidden; }
@@ -26,7 +31,7 @@ body { margin: 0; }
   left: 0;
   text-align: left;
   font-size: 0;
-  animation: 15s slidy infinite; 
+  animation: 15s slidy infinite;
 }
 
 

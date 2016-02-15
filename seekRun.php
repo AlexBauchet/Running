@@ -40,23 +40,7 @@
 
 	<!-- MAIN CONTENT -->
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->	
-			<div id="slider">
-				<figure>
-					<img src="img/running.jpeg"></img>
-					<img src="img/running2.jpg"></img>
-					<img src="img/running3.jpg"></img>
-					<img src="img/running4.png"></img>				
-				</figure>	
-			</div>
-
-	<!-- <div class="jumbotron"> -->
-		<div class="container">
-			<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
-		</div>	
-	</div>	
-
-
+	<!-- TO DO -->
 
 	<div class="container">
 		<div class="row">
@@ -66,6 +50,13 @@
 				<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
 			</div>
 		</div>
+
+	<!-- <div class="jumbotron"> -->
+		<div class="container">
+			<p><a class="btn btn-primary btn-lg" href="#" role="button">Ajouter une course &raquo;</a></p>
+		</div>	
+	</div>	
+
 
 		<hr>
 
