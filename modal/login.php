@@ -6,7 +6,7 @@
 			<div class="modal-body">
 				
 				<div class="button">
-					<button type="button" class="btn btn-primary btn-fb" data-dismiss="modal">Connexion avec Facebook</button>
+					<button type="button" class="btn btn-primary btn-fb" data-dismiss="modal"><i class="fa fa-facebook-official fa-1x"></i>Connexion avec Facebook</button>
 				</div>
 
 				<div class="button">

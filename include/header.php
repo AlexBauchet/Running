@@ -19,52 +19,9 @@
 				<!-- Button trigger modal -->
 				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
 
-
-
-
-
 				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#registerModal">Inscription</button>
-
-<!-- Register Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			
-			<div class="modal-body">
-				
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Connexion avec Facebook</button>
-
-				<button type="button" class="btn btn-danger" data-dismiss="modal">Connexion avec Google</button>
-
-				<hr>
-
-				<div class="form-group">
-					<label for="exampleInputEmail1"></label>
-					<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-				</div>
-				
-				<div class="form-group">
-					<label for="exampleInputPassword1"></label>
-					<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-				</div>
-
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
-
-			</div>
-
-			<div class="modal-footer">
-				<p>Déjà membre Running ? <a href="login.php">Connexion</a></p>
-			</div>
-
-		</div>
-	</div>
-</div>
-
 
 			</form>
 		</div>
-
-
 	</div>
 </nav>
