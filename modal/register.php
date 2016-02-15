@@ -25,14 +25,14 @@
 					</div>
 					
 					<div>
-						<button type="button" class="btn btn-success">Connexion</button>
+						<button type="button" class="btn btn-success">Inscription</button>
 					</div>
 
 				</div>
 			</div>
 
 			<div class="modal-footer">
-				<p>Vous n'avez pas de compte ? <a href="register.php">Inscription</a></p>
+				<p>Déjà membre Running ? <a href="login.php">Connexion</a></p>
 			</div>
 
 		</div>
