@@ -20,6 +20,7 @@
             padding-bottom: 20px;
         }
     </style>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/modal.css">
