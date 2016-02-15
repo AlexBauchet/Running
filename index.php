@@ -40,9 +40,7 @@
 
 	<!-- MAIN CONTENT -->
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-	<div class="jumbotron">
-		<div class="container">	
+    <!-- Main jumbotron for a primary marketing message or call to action -->	
 			<div id="slider">
 				<figure>
 					<img src="img/running.jpeg"></img>
@@ -51,8 +49,6 @@
 					<img src="img/running4.png"></img>				
 				</figure>	
 			</div>
-		</div>	
-	</div>
 
 	<div class="jumbotron">
 		<div class="container">

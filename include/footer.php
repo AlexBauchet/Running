@@ -1,7 +1,11 @@
 <footer>
 
-	<p>&copy; 2016 Running</p>
-
+	<div > 		
+	    <p>&copy; 2016 Running</p>
+		<p><a href="#">Contacts</a></p>
+		<p><a href="#">CGU</a></p>
+		<p><a href="#">Help</a></p>	
+	</div>	
 
 	<!-- SCRIPTS -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
