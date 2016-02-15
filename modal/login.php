@@ -6,11 +6,11 @@
 			<div class="modal-body">
 				
 				<div class="button">
-					<button type="button" class="btn btn-primary btn-rs" data-dismiss="modal">Connexion avec Facebook</button>
+					<button type="button" class="btn btn-primary btn-fb" data-dismiss="modal">Connexion avec Facebook</button>
 				</div>
 
 				<div class="button">
-					<button type="button" class="btn btn-danger btn-rs" data-dismiss="modal">Connexion avec Google</button>
+					<button type="button" class="btn btn-danger btn-google" data-dismiss="modal">Connexion avec Google</button>
 				</div>
 
 				<hr>
@@ -28,7 +28,7 @@
 						<input id="memoId" name="memoId" type="checkbox"> Se souvenir de moi</a>
 					</label>
 
-					<a class="forgetPwd" href="forgetPwd.php">Mot de passe oublié ?</a>
+					<p id="forgetPwd"><a class="forgetPwd" href="forgetPwd.php">Mot de passe oublié ?</a></p>
 					
 					<div class="button">
 						<button type="button" class="btn btn-success">Connexion</button>

@@ -17,7 +17,7 @@
 			<form class="navbar-form navbar-right" role="form">
 				
 				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connection</button>
+				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
 
 
 
