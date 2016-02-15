@@ -6,11 +6,11 @@
 			<div class="modal-body">
 				
 				<div class="button">
-					<button type="button" class="btn btn-primary btn-fb" data-dismiss="modal"><i class="fa fa-facebook-official fa-1x"></i>Connexion avec Facebook</button>
+					<button type="button" class="btn btn-fb" data-dismiss="modal"><i id="iFb" class="fa fa-facebook-official fa-2x"></i>Connexion avec Facebook</button>
 				</div>
 
 				<div class="button">
-					<button type="button" class="btn btn-danger btn-google" data-dismiss="modal">Connexion avec Google</button>
+					<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google fa-2x"></i>Connexion avec Google</button>
 				</div>
 
 				<hr>

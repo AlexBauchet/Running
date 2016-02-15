@@ -17,14 +17,14 @@
 .btn-fb {
 	width: 275px;
 	background-color: #4c67a1;
-	color: #ffffff;
+	color: #ffffff;  /* white */
 	border: 1px solid #4c67a1;
 }
 
 .btn-google {
 	width: 275px;
-	background-color: #fff;
-	color: #000;
+	background-color: #fff;  /* white */
+	color: #000;  /* black */
 	border: 1px solid #ddd;
 }
 
@@ -36,8 +36,6 @@ input {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
-
-
 
 #forgetPwd {
 	text-align: right;
@@ -52,7 +50,7 @@ label {
 }
 
 a {
-	color: red;
+	color: #f95947;  /* pale red */
 }
 
 .cgu {
@@ -63,6 +61,10 @@ a {
 	text-align: center;
 }
 
+i {
+	margin-right: 20px;
+}
 
-
-
+#iEmail {
+	margin-right: 5px;
+}
