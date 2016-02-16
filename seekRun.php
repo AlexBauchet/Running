@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/seekRun.css">
 	<link rel="stylesheet" href="css/modal.css">
 	<link rel="stylesheet" href="css/footer.css">
 
@@ -40,62 +40,67 @@
 
 
 	<!-- HEADER -->
-	<?php include(__DIR__.'/include/header.php'); ?>
+	<?php include(__DIR__.'/include/headerLoggedIn.php'); ?>
 
 
 	<!-- MAIN CONTENT -->
-
-	<br/>
-
-
-			<h1 class="text-center">Trouver une course</h1>
-	
-	<br/>		
-
-	<!-- Front bar -->
 	<div class="container">
-		<div class="row">
-			<article id="slide-bar" class="text-center">
-			  <nav class="btn-bar nav-light">
-			    <a href="#" class="btn btn-glass btn-primary">
-			      <i class="fa fa-fw fa-lg fa-map-o"></i> Depart
-			    </a>
-			    <a href="#" class="btn btn-glass btn-success">
-			      <i class="fa fa-fw fa-lg fa-calendar"></i> Date
-			    </a>
-			    <a href="#" class="btn btn-glass btn-warning">
-			      <i class="fa fa-fw fa-lg fa-clock-o "></i> Heure
-			    </a>
-			    <a href="#" class="btn btn-glass btn-danger">
-			      <i class="fa fa-fw fa-lg fa-venus-mars"></i> Genre
-			    </a>
-			  </nav>
-			</article>
-		</div>	
+		<h1 class="text-center h1-seekRun">Trouver une course</h1>
+	</div>
+
+	<!-- Menu trouver une course -->
+	<div class="container containerSeekRun">
+		<div class="row formSeekRun">
+			<form class="form-inline">
+
+				<div class="form-group">
+					<label for="city" hidden></label>
+					<!-- <i class="fa fa-fw fa-lg fa-map-o"></i> -->
+					<input id="city" name="city" type="text" placeholder="Ville de départ" class="form-control inputFieldSeekRun">
+				</div>
+
+				<div class="form-group">
+					<input id="departureDate" name="departureDate" type="date" placeholder="Date" class="form-control inputFieldSeekRun">
+				</div>
+
+				<div class="form-group">
+					<input id="departureTime" name="departureTime" type="text" placeholder="Heure" class="form-control inputFieldSeekRun">
+				</div>
+
+				<div class="form-group">
+					<select id="gender" name="gender"> 
+						<option value="" disabled selected>Runners</option>
+						<option value="0">N'importe</option>
+						<option value="1">Homme</option>
+						<option value="2">Femme</option>
+					</select>
+				</div>
+
+				<a type="submit" class="btn btn-danger">Chercher</a>
+
+			</form>
+		</div>
 	</div>	
 
-	<br/>
 
-	<!-- <div class="jumbotron"> -->
-		<div class="container">
-			<div class="row">
-				<p><a class="btn btn-info btn-lg" href="#" role="button"><i class="fa fa-fw fa-lg fa-plus-square-o"></i>Ajouter une course</a></p>
-			</div>	
-		</div>	
-	</div>	
-
-	<br/>
-
+	<!-- Affichage de la Map et ajouter une course -->
 	<div class="container">
-		<div class="row mapsHome">
-			<div class="col-md-12 mapsHomeMargin">
+		<div class="row mapsSeekRun">
+			<div class="col-md-12 mapsSekkRunMargin">
 				<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d20992.494806491482!2d2.222156289772821!3d48.87609744963252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x47e67ada5b5ac9db%3A0x4e579c1149864c2e!2sBois+de+Boulogne%2C+Paris!3m2!1d48.862440199999995!2d2.2491727!4m5!1s0x47e664e5248c7707%3A0xa682d0ab0702559d!2s134+Avenue+Pablo+Picasso%2C+Nanterre!3m2!1d48.887978499999996!2d2.2247219!5e0!3m2!1sfr!2sfr!4v1455551657149" 
 						width="900" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
 
+		<div class="row" id="addRunButton">
+			<p><a class="btn btn-info btn-lg" href="#" role="button">
+				<i class="fa fa-fw fa-lg fa-plus-square-o"></i>Ajouter une course</a>
+			</p>
+		</div>
+	<!-- Ne pas fermer la </div class='container'> ici.. Se ferme après le footer --> 
 
 
+		<!-- NE PAS TOUCHER -->
 		<hr class="hr-footer">
 
 

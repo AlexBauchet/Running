@@ -1,0 +1,64 @@
+
+
+/* ==========================================================================
+   SEEKRUN PAGE
+   ========================================================================== */
+
+@keyframes slidy {
+	0% { left: 0%; }
+	20% { left: 0%; }
+	25% { left: -100%; }
+	45% { left: -100%; }
+	50% { left: -200%; }
+	70% { left: -200%; }
+	75% { left: -300%; }
+	95% { left: -300%; }
+	100% { left: -400%; }
+}
+
+body {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	background: url(../img/Melamine-wood-003.png);
+}
+
+.h1-seekRun {
+	margin-top: 40px;
+}
+
+.mapsSeekRun {
+	text-align: center;	
+}
+
+.mapsSekkRunMargin {
+	margin-bottom: 40px;
+}
+
+.hr-footer {
+	border-top: 1px solid #373738; /* light dark */
+}
+
+.containerSeekRun {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.formSeekRun {
+	display: inline-flex;
+
+}
+
+.inputFieldSeekRun {
+	margin-right: 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#city {
+	width: 250px;	
+}
+
+#addRunButton {
+	text-align: center;
+	margin-bottom: 40px;
+}
