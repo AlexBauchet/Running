@@ -1,4 +1,12 @@
 <footer>
+<<<<<<< HEAD
+	
+	<div class="container"> 		
+	    <p>&copy; 2016 Running</p>
+		<p><a href="#">Contacts</a></p>
+		<p><a href="#">CGU</a></p>
+		<p><a href="#">Help</a></p>	
+=======
 
 	<div class="container">
 		<div class="row">
@@ -34,6 +42,7 @@
 				</div>
 			</div>
 		</div>	
+>>>>>>> origin/master
 	</div>	
 
 
