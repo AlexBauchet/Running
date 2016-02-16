@@ -1,6 +1,6 @@
 <?php
 
-	include(__DIR__.'/config/db.php');
+	include(__DIR__.'/../config/db.php');
 
 ?>
 
@@ -22,15 +22,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/bootstrap-theme.min.css">
 
-	<link rel="stylesheet" href="css/seekRun.css">
-	<link rel="stylesheet" href="css/modal.css">
-	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="../css/seekRun.css">
+	<link rel="stylesheet" href="../css/modal.css">
+	<link rel="stylesheet" href="../css/footer.css">
 
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 
 <body>
@@ -40,7 +40,7 @@
 
 
 	<!-- HEADER -->
-	<?php include(__DIR__.'/include/headerLoggedIn.php'); ?>
+	<?php include(__DIR__.'/../include/headerLoggedIn.php'); ?>
 
 
 	<!-- MAIN CONTENT -->
@@ -104,13 +104,8 @@
 		<hr class="hr-footer">
 
 
-		<!-- INCLUDE MODALS SUR HOMEPAGE UNIQUEMENT -->
-		<?php include(__DIR__.'/modal/login.php'); ?>
-		<?php include(__DIR__.'/modal/register.php'); ?>
-
-
 		<!-- FOOTER -->
-		<?php include(__DIR__.'/include/footer.php'); ?>
+		<?php include(__DIR__.'/../include/footer.php'); ?>
 
 
 	</div> <!-- /container -->        
