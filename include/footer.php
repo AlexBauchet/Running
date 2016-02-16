@@ -2,7 +2,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-md-offset-3"> 		
+			<div class="col-md-3 col-md-offset-4"> 		
 				<p>Aide</p>
 				<p><a href="#">Contacts</a></p>
 				<p><a href="#">CGU</a></p>
@@ -16,15 +16,17 @@
 	</div>
 
 	<div class="container">
-		<div class="row">
+		<div id="footer-rs" class="row">
 			<div class="col-md-8 col-md-offset-2"> 		
 				<div>
 					<p>Rejoignez-nous sur</p>
 				</div>
 
 				<div>
-					<p><a href="#"></a></p>
-					<p><a href="#"></a></p>
+					<p><a href="#"><i class="fa fa-facebook-official fa-2x footer-rs"></i></a></p>
+					<p><a href="#"><i class="fa fa-google fa-2x footer-rs"></i></a></p>
+					<p><a href="#"><i class="fa fa-instagram fa-2x footer-rs"></i></a></p>
+					<p><a href="#"><i class="fa fa-linkedin fa-2x footer-rs"></i></a></p>
 				</div>
 
 				<div>
