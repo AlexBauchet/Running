@@ -1,11 +1,39 @@
 <footer>
 
-	<div > 		
-	    <p>&copy; 2016 Running</p>
-		<p><a href="#">Contacts</a></p>
-		<p><a href="#">CGU</a></p>
-		<p><a href="#">Help</a></p>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-md-offset-3"> 		
+				<p>Aide</p>
+				<p><a href="#">Contacts</a></p>
+				<p><a href="#">CGU</a></p>
+			</div>
+
+			<div class="col-md-3"> 
+				<p>Blog</p>	
+				<p><a href="#">Articles</a></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2"> 		
+				<div>
+					<p>Rejoignez-nous sur</p>
+				</div>
+
+				<div>
+					<p><a href="#"></a></p>
+					<p><a href="#"></a></p>
+				</div>
+
+				<div>
+					<p>&copy; 2016 Running</p>
+				</div>
+			</div>
+		</div>	
 	</div>	
+
 
 	<!-- SCRIPTS -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
