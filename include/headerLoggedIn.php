@@ -14,14 +14,24 @@
 		</div>
 
 		 <div id="navbar" class="navbar-collapse collapse">
-			<form class="navbar-form navbar-right" role="form">
-				
-				<!-- Button trigger modal -->
-				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
 
-				<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#registerModal">Se déconnecter</button>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">($_SESSION['name'])</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-1x"></i><span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Ajouter une course</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Préférences</a></li>
+						<li><a href="#">Se déconnecter</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Aide</a></li>
+						<li><a href="#">Signaler un problème</a></li>
 
-			</form>
+					</ul>
+				</li>
+			</ul>
+
 		</div>
 	</div>
 </nav>

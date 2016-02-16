@@ -54,8 +54,8 @@
 			<form class="form-inline">
 
 				<div class="form-group">
-					<label for="city" hidden></label>
-					<!-- <i class="fa fa-fw fa-lg fa-map-o"></i> -->
+					<!-- <label for="city" hidden></label> -->
+					<!-- <span class="input-group-addon"><i class="fa fa-map-o fa-fw"></i></span> -->
 					<input id="city" name="city" type="text" placeholder="Ville de départ" class="form-control inputFieldSeekRun">
 				</div>
 
@@ -80,7 +80,7 @@
 
 			</form>
 		</div>
-	</div>	
+	</div>
 
 
 	<!-- Affichage de la Map et ajouter une course -->
