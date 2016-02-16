@@ -35,3 +35,20 @@ body { margin: 0; }
 	font-size: 0;
 	animation: 15s slidy infinite;
 }
+
+#slider {
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+#mapsHome {
+	text-align: center;	
+}
+
+#mapsHomeMargin {
+	margin-bottom: 40px;
+}
+
+.hr-modal {
+	border-top: 1px solid #373738; /* light dark */
+}

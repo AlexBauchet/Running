@@ -16,7 +16,7 @@
 
 					<hr>
 					
-					<!-- Login		 -->
+					<!-- Login -->
 					<div class="form-group <?php if(isset($_SESSION['loginErrors']['user'])) echo 'has-error'; ?>">
 						<input type="email" class="form-control" id="email" name="email" placeholder="email" value="<?php if(isset($_SESSION['lastLogin']['email'])) echo $_SESSION['lastLogin']['email']; ?>">
 						<?php if(isset($_SESSION['loginErrors']['user'])): ?>
@@ -36,9 +36,7 @@
 						<?php endif; ?>
 					</div>
 
-
-
-
+					<div>
 						<label id="labCgu" for="cgu" class="pure-checkbox">
 							<input id="memoId" name="memoId" type="checkbox"> Se souvenir de moi</a>
 						</label>

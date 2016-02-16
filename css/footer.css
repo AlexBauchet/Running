@@ -7,3 +7,33 @@
 #footer-rs {
 	text-align: center;
 }
+
+.footer-rs {
+	color: #373738;
+	width: 28px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#logo-rs {
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+.h2-footer {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.liensFooter {
+	color: #373738; /* light dark */
+}
+
+.col-md-8.col-md-offset-2 {
+	margin-top: 30px;
+}
+
+#copyright {
+	margin-top: 10px;
+	font-size: 0.9em;
+}
