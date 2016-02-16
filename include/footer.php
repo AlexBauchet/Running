@@ -1,6 +1,6 @@
 <footer>
-
-	<div > 		
+	
+	<div class="container"> 		
 	    <p>&copy; 2016 Running</p>
 		<p><a href="#">Contacts</a></p>
 		<p><a href="#">CGU</a></p>
