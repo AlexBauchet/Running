@@ -26,14 +26,6 @@ body {
 	margin-top: 40px;
 }
 
-.mapsSeekRun {
-	text-align: center;	
-}
-
-.mapsSekkRunMargin {
-	margin-bottom: 40px;
-}
-
 .hr-footer {
 	border-top: 1px solid #373738; /* light dark */
 }
@@ -43,19 +35,12 @@ body {
 	margin-bottom: 20px;
 }
 
+.form-group {
+	margin-bottom: 25px;
+}
+
 .formSeekRun {
 	display: inline-flex;
-
-}
-
-.inputFieldSeekRun {
-	margin-right: 10px;
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-#city {
-	width: 250px;	
 }
 
 #addRunButton {
@@ -63,3 +48,10 @@ body {
 	margin-bottom: 40px;
 }
 
+.inputCreateRun {
+
+}
+
+label {
+	
+}
