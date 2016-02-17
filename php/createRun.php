@@ -30,7 +30,13 @@
 	<link rel="stylesheet" href="../css/modal.css">
 	<link rel="stylesheet" href="../css/footer.css">
 
+	<script src="../js/vendor/jquery-1.11.2.min.js"></script>
     <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+
+	<script src="../js/main.js"></script>
+    
+
 </head>
 
 <body>
@@ -87,6 +93,14 @@
 					<div class="form-group">
 						<label class="inputCreateRun" for="runLevel">Niveau du run</label>
 						<input id="runLevel" name="runLevel" type="text" placeholder="Niveau" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<div id="rngs">
+						    <label class="rng_ttl">Barre de progression</label>
+						    <input type="range" class="rng" min="0" value="0" max="10" step="1">
+						    <label class="val">0</label>
+						</div>    
 					</div>
 
 					<a type="submit" class="btn btn-danger">Ajouter</a>

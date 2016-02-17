@@ -30,7 +30,12 @@
 	<link rel="stylesheet" href="../css/modal.css">
 	<link rel="stylesheet" href="../css/footer.css">
 
+    <script src="../js/vendor/jquery-1.11.2.min.js"></script>
     <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+
+	<script src="../js/main.js"></script>
+	
 </head>
 
 <body>
@@ -53,6 +58,10 @@
 		<div class="row formSeekRun">
 			<form class="form-inline">
 
+			<div class="form-group">	
+				<i class="fa fa-map fa-2x"></i>
+			</div>	
+
 				<div class="form-group">
 					<!-- <label for="city" hidden></label> -->
 					<!-- <span class="input-group-addon"><i class="fa fa-map-o fa-fw"></i></span> -->
@@ -60,15 +69,28 @@
 				</div>
 
 				<div class="form-group">
+					<i class="fa fa-calendar fa-2x"></i>
+				</div>
+
+				<div class="form-group">
 					<input id="departureDate" name="departureDate" type="date" placeholder="Date" class="form-control inputFieldSeekRun">
 				</div>
 
 				<div class="form-group">
+					<i class="fa fa-clock-o fa-2x"></i> 
+				</div>
+
+				<div class="form-group">
+
 					<input id="departureTime" name="departureTime" type="text" placeholder="Heure" class="form-control inputFieldSeekRun">
 				</div>
 
 				<div class="form-group">
-					<select id="gender" name="gender"> 
+					<i class="fa fa-venus-mars fa-2x"></i>
+				</div>
+
+				<div class="form-group">
+					<select class="form-control" id="gender" name="gender"> 
 						<option value="" disabled selected>Runners</option>
 						<option value="0">N'importe</option>
 						<option value="1">Homme</option>
@@ -76,7 +98,9 @@
 					</select>
 				</div>
 
-				<a type="submit" class="btn btn-danger">Chercher</a>
+				<div class="form-group">
+					<a type="submit" class="btn btn-danger">Chercher</a>
+				</div>
 
 			</form>
 		</div>

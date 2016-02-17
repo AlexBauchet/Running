@@ -21,7 +21,13 @@
 	<link rel="stylesheet" href="css/modal.css">
 	<link rel="stylesheet" href="css/footer.css">
 
+	<script src="js/vendor/jquery-1.11.2.min.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script> 
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+ 
+
+	<script src="js/main.js"></script> 
+	
 </head>
 
 <body>
@@ -59,6 +65,7 @@
 						width="700" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
+
 
 		<hr class="hr-footer">
 

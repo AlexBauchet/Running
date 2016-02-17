@@ -10,4 +10,12 @@ $(document).ready(function() {
 		$('#registerModal').modal('show');
 	});
 
+
+	// ------ createRun.php ------
+
+	$(".rng").click(function(){
+    	$(this).next(".val").html(this.value);
+	}); 
+
+
 });
