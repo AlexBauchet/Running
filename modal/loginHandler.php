@@ -1,9 +1,10 @@
 <?php
 
-	session_start();  // permet d'indiquer au système que l'on va débuter une session pour l'utilisateur
+	// session_start();  // permet d'indiquer au système que l'on va débuter une session pour l'utilisateur
 
 	require_once(__DIR__.'/../config/db.php');
 
+	print_r($_POST);
 
 	// vérifier que le button submit a été cliqué
 	if(isset($_POST['action'])) {
@@ -14,9 +15,8 @@
 
 		// création d'un tableau de session dans le cas ou le user n'a pas réussi à se logger
 		// permet de conserver les champs correctement saisis si d'autres n'ont pas été saisis correctement
-		$_SESSION['lastLogin'] = [];
-
-		$_SESSION['lastLogin']['email'] = $email;
+		// $_SESSION['lastLogin'] = [];
+		// $_SESSION['lastLogin']['email'] = $email;
 
 
 		// initialisation d'un tableau d'erreurs
@@ -40,7 +40,7 @@
 				unset($resultUser['password']);
 				$_SESSION['user'] = $resultUser;
 
-				// on redirige l'user vers la page protégée catalogue.php
+				// on redirige l'user vers la page protégée 
 				header("Location: ../index.php");
 				die();
 			}

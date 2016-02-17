@@ -1,5 +1,6 @@
+
 <!-- Login Modal -->
-<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			
@@ -30,10 +31,10 @@
 						<?php endif; ?>
 					</div>
 
-					<!-- <div class="form-group">
+					<div class="form-group">
 						<label for="passwordConf">Confirmer mot de passe</label>
 						<input type="password" class="form-control" id="passwordConf" name="passwordConf" placeholder="confirm password">
-					</div> -->
+					</div>
 
 					<label id="labCgu" for="cgu" class="pure-checkbox">
 						<input id="memoId" name="memoId" type="checkbox"> Se souvenir de moi</a>
@@ -54,4 +55,79 @@
 			</div>
 
 		</div>
+	</div> -->
+
+
+
+<!-- __________________________________________________________________ -->
+
+<!-- MON CODE -->
+
+<?php
+
+	require(__DIR__.'/registerHandler.php');
+?>
+
+
+<div>
+	<div>
+		<div>
+			
+			<div>
+				
+				<p>Inscrivez-vous avec <a>Facebook</a> ou <a>Google</a></p>
+
+				<hr>
+
+				<div>
+
+				<!-- Affiche les erreurs (stockés en session avec la clé registerErrors)-->
+				<?php if(isset($_SESSION['registerErrors'])): ?>
+					<div class="alert alert-danger">
+						<?php foreach($_SESSION['registerErrors'] as $keyError => $error): ?>
+							<p><?php echo $error; ?></p>
+						<?php endforeach; ?>
+					</div>
+					<!-- Supprime les erreurs après les avoir affiché 1 fois -->
+					<?php unset($_SESSION['registerErrors']); ?>
+				<?php endif; ?>
+
+
+
+				<form method="POST" action="#">
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+					</div>
+					
+				    <div class="form-group">
+		              <label for="password">Mot de passe</label>
+		              <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
+		            </div>
+
+		            <div class="form-group">
+		              <label for="passwordConfirm">Confirmez votre mot de passe</label>
+		              <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmez votre mot de passe">
+		            </div>
+
+					<label id="labCgu" for="cgu" class="pure-checkbox">
+						<input id="memoId" name="memoId" type="checkbox"> Se souvenir de moi</a>
+					</label>
+
+					<p>En créant un compte, vous acceptez les <a>Conditions générales</a> et la <a>Politique de confidentialité</a>.</p>
+				
+					<div class="button">
+						<button type="submit" name="action" class="btn btn-success">Inscription</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="modal-footer">
+			<p>Déjà membre Running ? <a href="#">Connexion</a></p>
+		</div>
+
 	</div>
+</div>

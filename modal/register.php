@@ -16,7 +16,7 @@
 				<hr>
 
 				<div>
-					<p id="registerLink"><a href="#"><i id="iEmail" class="fa fa-envelope-o fa-1x"></i>Inscription avec un email</a></p>
+					<p id="registerLink"><a href="http://localhost/running/modal/registerEmail.php"><i id="iEmail" class="fa fa-envelope-o fa-1x"></i>Inscription avec un email</a></p>
 
 					<p class="cgu">En créant un compte, vous acceptez les <a>Conditions générales</a> et la <a>Politique de confidentialité</a>.</p>
 

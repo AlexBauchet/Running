@@ -1,10 +1,16 @@
+<?php
+
+	require(__DIR__.'/loginHandler.php');
+
+?>
+
 <!-- Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			
 			<div id="loginID" class="modal-body">
-				<form id="formLogin" method="POST" action="loginHandler.php">
+				<form id="formLogin" method="POST" action="#">
 					
 					<div class="button">
 						<button type="button" class="btn btn-fb" data-dismiss="modal"><i id="iFb" class="fa fa-facebook-official fa-2x"></i>Connexion avec Facebook</button>
@@ -17,24 +23,16 @@
 					<hr>
 					
 					<!-- Login -->
-					<div class="form-group <?php if(isset($_SESSION['loginErrors']['user'])) echo 'has-error'; ?>">
-						<input type="email" class="form-control" id="email" name="email" placeholder="email" value="<?php if(isset($_SESSION['lastLogin']['email'])) echo $_SESSION['lastLogin']['email']; ?>">
-						<?php if(isset($_SESSION['loginErrors']['user'])): ?>
-							 <span class="help-block">
-							 	<?php echo ($_SESSION['loginErrors']['user']); ?>
-							 </span>
-						<?php endif; ?>
-					</div>
+					<div class="form-group">
+			            <label for="email">Email</label>
+			            <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+			        </div>
 
-					<!-- Password -->
-					<div class="form-group <?php if(isset($_SESSION['loginErrors']['password'])) echo 'has-error'; ?>">
-						<input type="password" class="form-control" id="password" name="password" placeholder="password">
-						<?php if(isset($_SESSION['loginErrors']['password'])): ?>
-							 <span class="help-block">
-							 	<?php echo ($_SESSION['loginErrors']['password']); ?>
-							 </span>
-						<?php endif; ?>
-					</div>
+					<!-- Password -->					
+					 <div class="form-group">
+			            <label for="password">Password</label>
+			            <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+			        </div>
 
 					<div>
 						<label id="labCgu" for="cgu" class="pure-checkbox">
