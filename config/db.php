@@ -2,7 +2,7 @@
 
 define('HOST', 'localhost'); // Domaine ou IP du serveur ou est située la base de données
 define('USER', 'root'); // Nom d'utilisateur autorisé à se connecter à la base
-define('PASSWORD', 'root');  // Mot de passe de connexion à la base
+define('PASSWORD', '');  // Mot de passe de connexion à la base
 define('DB', 'running'); // Base de données sur laquelle on va faire les requêtes
 
 $db_options = array(
