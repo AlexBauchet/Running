@@ -78,8 +78,6 @@
 		</div>
 	</div>
 
-
-	<!-- FOOTER -->
 	
 	<div class="container">
 
