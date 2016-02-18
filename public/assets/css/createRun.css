@@ -49,6 +49,10 @@ body {
     width: 90%;
 }
 
+.col-md-12.mapsCreateRun.text-center {
+    margin-bottom: 40px;
+}
+
 input[type="range"].rng {
     outline: none;
     -webkit-appearance: none;
