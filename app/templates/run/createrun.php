@@ -81,9 +81,6 @@
 				width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>
-	</div>	
-
-
 
 		<hr class="hr-footer">
 

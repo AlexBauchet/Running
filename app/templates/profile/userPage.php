@@ -79,13 +79,9 @@
 	</div>
 
 
-	<!-- Affichage de la Map et ajouter une course -->
+	<!-- FOOTER -->
 	
 	<div class="container">
-
-		<!-- affichage de la map -->
-		<p>GOOGLE MAP</p>
-
 
 		<hr class="hr-footer">
 
