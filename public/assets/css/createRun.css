@@ -53,10 +53,6 @@ body {
 
 }
 
-label {
-	
-}
-
 
 input[type="range"].rng {
     outline: none;
@@ -83,6 +79,3 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 
-background-image: -moz-linear-gradient(left, #52FF00, #FF3D00);
-
-color-stop(0.00, #52FF00), color-stop(1.0, #FF3D00));

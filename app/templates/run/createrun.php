@@ -27,7 +27,7 @@
 
 					<div class="form-group">
 						<label class="inputCreateRun" for="city">Ville</label>
-						<input id="city" name="city" type="text" placeholder="Ville de départ" class="form-control">
+						<input id="cityCreate" name="city" type="text" placeholder="Ville de départ" class="form-control">
 					</div>
 
 					<div class="form-group">

@@ -20,7 +20,7 @@
 				<div class="form-group">
 					<!-- <label for="city" hidden></label> -->
 					<!-- <span class="input-group-addon"><i class="fa fa-map-o fa-fw"></i></span> -->
-					<input id="city" name="city" type="text" placeholder="Ville de départ" class="form-control inputFieldSeekRun">
+					<input id="citySeek" name="city" type="text" placeholder="Ville de départ" class="form-control inputFieldSeekRun">
 				</div>
 
 				<div class="form-group">
