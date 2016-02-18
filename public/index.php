@@ -14,3 +14,5 @@
 
 	//exécute l'appli
 	$app->run();
+
+	bonjour
