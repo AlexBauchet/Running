@@ -48,10 +48,10 @@
 						<input id="runLevel" name="runLevel" type="text" placeholder="Niveau" class="form-control">
 					</div>
 
-					<div class="form-group">
+					<div class="form-group">				
 						<div id="rngs">
-						    <label class="rng_ttl">Barre de progression</label>
-						    <input type="range" class="rng" min="0" value="0" max="10" step="1">
+						    <label class="inputCreateRun" for="level">Niveau de la course</label>
+						    <input type="range" id="levelId" class="rng form-control" min="0" value="0" max="10" step="1">
 						    <label class="val">0</label>
 						</div>    
 					</div>

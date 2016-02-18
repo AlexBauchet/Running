@@ -19,11 +19,12 @@
 body {
 	padding-top: 50px;
 	padding-bottom: 20px;
-	background: url(../img/Melamine-wood-003.png);
+	background: url(../img/wall.jpg);
 }
 
 .h1-seekRun {
 	margin-top: 40px;
+	color: #fff;
 }
 
 .mapsSeekRun {
@@ -63,3 +64,18 @@ body {
 	margin-bottom: 40px;
 }
 
+.fa-map {
+	color: #fff;
+}
+
+.fa-calendar {
+	color: #fff;
+}
+
+.fa-clock-o {
+	color: #fff;
+}
+
+.fa-venus-mars {
+	color: #fff;
+}

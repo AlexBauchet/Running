@@ -17,9 +17,10 @@
 }
 
 body {
-	padding-top: 50px;
-	padding-bottom: 20px;
-	background: url(../img/Melamine-wood-003.png);
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: url(../img/wall.jpg);
+    color: #fff;
 }
 
 .h1-seekRun {
@@ -75,9 +76,11 @@ input[type="range"].rng {
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0.00, #FF3D00), color-stop(1.0, #52FF00));
     height: 2px;
     width: 150px;
-    border: solid #fff 3px;
+    border: solid #000 #fff 3px;
     border-radius: 2px;
-    margin: 7px;
+    margin: 2px;
+    color: #000;
+
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -87,4 +90,5 @@ input[type="range"]::-webkit-slider-thumb {
     height: 12px;
     border-radius: 12px;
     cursor: pointer;
+    color: #000;  
 }
