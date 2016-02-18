@@ -50,9 +50,9 @@
 			<div class="col-md-6">
 
 				<h2>Bonjour, je m'appelle 'PRENOM DU MEMBRE' !</h2>
-				<a type="submit" href="updateProfil.php">Modifier mon profil</a>
+				<a type="submit" href="updateProfile.php">Modifier mon profil</a>
 
-				<h3>'VLLE DU MEMBRE', 'PAYS DU MEMBRE' - Membre depuis 'CREATED_AT(MOIS ANNEE)'!</h3>
+				<h3>'VILLE DU MEMBRE', 'PAYS DU MEMBRE' - Membre depuis 'CREATED_AT(MOIS ANNEE)'!</h3>
 				
 				<p>'DESCRIPTION DU MEMBRE'</p>
 

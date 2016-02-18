@@ -13,6 +13,10 @@ class ProfileController extends Controller
 		$this->show('profile/userPage');
 	}
 
-
+	/* Page updateProfile */
+	public function updateProfile()
+	{
+		$this->show('profile/updateProfile');
+	}
 
 }

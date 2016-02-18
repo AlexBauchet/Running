@@ -6,6 +6,7 @@
 		['GET', '/createrun', 'Run#createrun', 'createrun'],
 		['GET', '/seekrun', 'Run#seekrun', 'seekrun'],
 		['GET', '/userPage', 'Profile#userPage', 'userPage'],
+		['GET', '/updateProfile', 'Profile#updateProfile', 'updateProfile'],
 
 		['GET', '/register', 'Register#index', 'register'],
 		['POST', '/registerUser', 'Register#registerUser', 'registerUser'],
