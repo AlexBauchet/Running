@@ -12,25 +12,28 @@
 	<!-- Menu créer une course -->
 	<div class="container">
 		<div class="row">
+
+			<div class="col-md-1"></div>
+
 			<div class="col-md-5">
 				<form class="form-horizontal">
 
-					<div class="form-group">
+					<div class="form-group form-group-createrun">
 						<label class="inputCreateRun" for="address">Adresse</label>
 						<input id="address" name="address" type="text" placeholder="Adresse de départ" class="form-control">
 					</div>
 
-					<div class="form-group">
+					<div class="form-group form-group-createrun">
 						<label class="inputCreateRun" for="zipCode">Code postal</label>
 						<input id="zipCode" name="zipCode" type="text" placeholder="Code postal" class="form-control">
 					</div>
 
-					<div class="form-group">
+					<div class="form-group form-group-createrun">
 						<label class="inputCreateRun" for="city">Ville</label>
 						<input id="cityCreate" name="city" type="text" placeholder="Ville de départ" class="form-control">
 					</div>
 
-					<div class="form-group">
+					<div class="form-group form-group-createrun">
 						<label class="inputCreateRun" for="country">Pays</label>
 						<input id="country" name="country" type="text" placeholder="Pays" class="form-control">
 					</div>
@@ -39,22 +42,21 @@
 			</div>
 		
 
-			<div class="col-md-2"></div>
 
 			<div class="col-md-5">
 				<form class="form-horizontal">
 
-					<div class="form-group">
+					<div class="form-group form-group-createrun">
 						<label class="inputCreateRun" for="departureDate">Date de départ</label>
 						<input id="departureDate" name="departureDate" type="date" placeholder="Date" class="form-control">
 					</div>
 
-					<div class="form-group">
+					<div class="form-group form-group-createrun">
 						<label class="inputCreateRun" for="departureDate">Heure de départ</label>
 						<input id="departureTime" name="departureTime" type="text" placeholder="Heure" class="form-control">
 					</div>
 
-					<div class="form-group">				
+					<div class="form-group form-group-createrun">				
 						<div id="rngs">
 						    <label class="inputCreateRun" for="level">Niveau du run</label>
 						    <input type="range" id="levelId" class="rng form-control" min="0" value="0" max="10" step="1">
@@ -62,12 +64,15 @@
 						</div>    
 					</div>
 
-					<div class="form-group">
+					<div class="form-group form-group-createrun">
 						<a type="submit" class="btn btn-danger">Ajouter</a>
-					</div>	
+					</div>
 
-				</form>	
+				</form>
 			</div>
+
+			<div class="col-md-1"></div>
+
 		</div>
 	</div>		
 	
