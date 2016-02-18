@@ -6,6 +6,7 @@
 
 #footer-rs {
 	text-align: center;
+    color: #fff;
 }
 
 .footer-rs {
@@ -13,6 +14,7 @@
 	width: 28px;
 	margin-left: 10px;
 	margin-right: 10px;
+    color: #fff;
 }
 
 #logo-rs {
@@ -23,10 +25,11 @@
 .h2-footer {
 	font-weight: bold;
 	font-size: 1.1em;
+	color: #fff;
 }
 
 .liensFooter {
-	color: #373738; /* light dark */
+	color: #fff;
 }
 
 .col-md-8.col-md-offset-2 {
