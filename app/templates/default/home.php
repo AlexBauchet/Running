@@ -1,6 +1,6 @@
-<?php $this->layout('layout', ['title' => 'Accueil']) ?>
+<?php $this->layout('layout', ['title' => 'Accueil', 'nav' =>'home']) ?>
 
-<?php $this->start('home') ?>
+<?php $this->start('main_content') ?>
 
 	<!-- Slider -->
 

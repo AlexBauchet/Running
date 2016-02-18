@@ -66,7 +66,7 @@
 
     <section>
 
-    	<?= $this->section('home') ?>
+    	<?= $this->section('main_content') ?>
 
     </section>
 

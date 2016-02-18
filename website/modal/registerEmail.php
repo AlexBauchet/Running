@@ -94,22 +94,39 @@
 
 
 
-				<form method="POST" action="#">
+				<form method="POST" action="registerHandler.php">
 
-					<div class="form-group">
-						<label for="email">Email</label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+					<div class="form-group <?php if(isset($_SESSION['registerErrors']['email'])) echo 'has-error'; ?>">
+					<label for="email">Email</label>
+					<input type="email" class="form-control" id="email" placeholder="Email" value="<?php if(isset($_SESSION['lastRegister']['email'])) echo $_SESSION['lastRegister']['email']; ?>">
+						<?php if(isset($_SESSION['registerErrors']['email'])): ?>
+							<span class="help-block">
+							 	<?php echo ($_SESSION['registerErrors']['email']); ?>
+							</span>
+						<?php endif; ?>
+					</div>					
+				   
+		            <div class="form-group <?php if(isset($_SESSION['registerErrors']['password'])) echo 'has-error'; ?>">
+		            	<label for="password">Mot de passe</label>
+						<input type="password" class="form-control" id="password" name="password" placeholder="password">
+						<?php if(isset($_SESSION['registerErrors']['password'])): ?>
+							<span class="help-block">
+							 	<?php echo ($_SESSION['registerErrors']['password']); ?>
+							</span>
+						<?php endif; ?>
 					</div>
-					
-				    <div class="form-group">
-		              <label for="password">Mot de passe</label>
-		              <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
+
+		            <div class="form-group <?php if(isset($_SESSION['registerErrors']['password'])) echo 'has-error'; ?>">
+			            <label for="passwordConfirm">Confirmez votre mot de passe</label>
+			            <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmez votre mot de passe">
+			            <?php if(isset($_SESSION['registerErrors']['passwordConfirm'])): ?>
+							<span class="help-block">
+								<?php echo ($_SESSION['registerErrors']['passwordConfirm']); ?>
+							</span>
+						<?php endif; ?>
 		            </div>
 
-		            <div class="form-group">
-		              <label for="passwordConfirm">Confirmez votre mot de passe</label>
-		              <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmez votre mot de passe">
-		            </div>
+
 
 					<label id="labCgu" for="cgu" class="pure-checkbox">
 						<input id="memoId" name="memoId" type="checkbox"> Se souvenir de moi</a>
