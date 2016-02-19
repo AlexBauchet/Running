@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Ven 19 Février 2016 à 12:20
+-- Généré le :  Ven 19 Février 2016 à 12:38
 -- Version du serveur :  5.5.42
 -- Version de PHP :  7.0.0
 
@@ -30,15 +30,17 @@ CREATE TABLE `profiles` (
   `id` int(11) NOT NULL,
   `firstname` varchar(255) CHARACTER SET utf8 NOT NULL,
   `lastname` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `sexe` varchar(10) CHARACTER SET utf8 NOT NULL,
+  `gender` varchar(10) CHARACTER SET utf8 NOT NULL,
   `birthdate` date NOT NULL,
+  `home_town` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `home_country` varchar(255) CHARACTER SET utf8 NOT NULL,
   `language` varchar(50) CHARACTER SET utf8 NOT NULL,
-  `avg_speed` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `avg_speed` int(11) NOT NULL,
   `description` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `blablarun` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `blablarun` int(11) NOT NULL,
   `rate` int(11) NOT NULL,
   `created_at` date NOT NULL,
-  `updated_at` int(11) NOT NULL,
+  `updated_at` date NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
@@ -46,8 +48,8 @@ CREATE TABLE `profiles` (
 -- Contenu de la table `profiles`
 --
 
-INSERT INTO `profiles` (`id`, `firstname`, `lastname`, `sexe`, `birthdate`, `language`, `avg_speed`, `description`, `blablarun`, `rate`, `created_at`, `updated_at`, `user_id`) VALUES
-(3, 'pauline', 'servant', 'f', '1987-02-19', 'f', '5', 'descripion', '', 4, '2016-02-19', 1, 2);
+INSERT INTO `profiles` (`id`, `firstname`, `lastname`, `gender`, `birthdate`, `home_town`, `home_country`, `language`, `avg_speed`, `description`, `blablarun`, `rate`, `created_at`, `updated_at`, `user_id`) VALUES
+(3, 'pauline', 'servant', 'f', '1987-02-19', '', '', 'f', 5, 'descripion', 0, 4, '2016-02-19', '0000-00-00', 2);
 
 -- --------------------------------------------------------
 
@@ -57,12 +59,12 @@ INSERT INTO `profiles` (`id`, `firstname`, `lastname`, `sexe`, `birthdate`, `lan
 
 CREATE TABLE `runnings` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `level` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `km` int(11) NOT NULL,
+  `run_name` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `run_level` varchar(255) CHARACTER SET utf8 NOT NULL,
+  `distance_km` int(11) NOT NULL,
   `date` date NOT NULL,
-  `latitude` int(11) NOT NULL,
-  `longitude` int(11) NOT NULL,
+  `latitude` int(13) NOT NULL,
+  `longitude` int(13) NOT NULL,
   `created_at` date NOT NULL,
   `upgrated_at` date NOT NULL,
   `description` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -79,7 +81,7 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `role` int(255) NOT NULL
+  `role` varchar(30) NOT NULL DEFAULT 'member'
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
@@ -87,8 +89,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
-(1, 'test1@gmail.com', 'azerty1&', 0),
-(2, 'p@g.com', '$2y$10$ZfhZEyobMpQJxVFeiLbVROxsr0bLWUlkLdLCLcRUUjMB4foaG2joK', 0);
+(1, 'test1@gmail.com', 'azerty1&', '0'),
+(2, 'p@g.com', '$2y$10$ZfhZEyobMpQJxVFeiLbVROxsr0bLWUlkLdLCLcRUUjMB4foaG2joK', '0');
 
 -- --------------------------------------------------------
 

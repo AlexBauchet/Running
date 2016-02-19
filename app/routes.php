@@ -5,8 +5,8 @@
 		
 		['GET', '/createrun', 'Run#createrun', 'createrun'],
 		['GET', '/seekrun', 'Run#seekrun', 'seekrun'],
-		['GET', '/userPage', 'Profile#userPage', 'userPage'],
-		['GET', '/updateProfile', 'Profile#updateProfile', 'updateProfile'],
+		// ['GET', '/userPage', 'Profile#userPage', 'userPage'],
+
 
 		['GET', '/register', 'Register#index', 'register'],
 		['POST', '/registerUser', 'Register#registerUser', 'registerUser'],
@@ -16,5 +16,6 @@
 		['GET', '/logout', 'Login#logout', 'logout'],
 
 		['GET', '/profile/view/[i:id]', 'Profile#view', 'viewProfile'],
-			
+		['GET', '/profile/updateProfile', 'Profile#updateProfile', 'updateProfile'],
+
 	);
