@@ -22,6 +22,31 @@
 					<input id="address" name="address" type="text" placeholder="Importer une photo" class="form-control">
 				</div>
 
+				<div class="form-group">
+					<label class="inputCreateRun" for="firstname">Prénom</label>
+					<input id="firstname" name="firstname" type="text" placeholder="Prenom" value="<?php if(isset($profile['firstname'])) echo $profile['firstname'] ?>" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="inputCreateRun" for="lastname">Nom</label>
+					<input id="lastname" name="lastname" type="text" placeholder="Nom" value="<?php if(isset($profile['lastname'])) echo $profile['lastname'] ?>" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="inputCreateRun" for="email">Email</label>
+					<input id="email" name="email" type="text" placeholder="exemple@abc.com" value="<?php if(isset($profile['email'])) echo $profile['email'] ?>" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="inputCreateRun" for="homeTown">Ville de résidence</label>
+					<input id="homeTown" name="homeTown" type="text" placeholder="Ville de résidence" value="<?php if(isset($profile['home_town'])) echo $profile['home_town'] ?>" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="inputCreateRun" for="homeCountry">Pays de résidence</label>
+					<input id="homeCountry" name="homeCountry" type="text" placeholder="Pays de résidence" value="<?php if(isset($profile['home_country'])) echo $profile['home_country'] ?>" class="form-control">
+				</div>
+
 			</div>
 
 			<div class="col-md-6">

@@ -50,7 +50,15 @@
 			<div class="col-md-6">
 
 				<h2>Bonjour, je m'appelle <?= $profile['firstname'] ?> !</h2>
-				<a type="submit" href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
+				
+				<?php if ($w_user[‘id’] == $profile[‘id’]) : ?>
+					<a type="submit" href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
+				<?php endif; ?>
+
+				<?php echo $w_user[‘id’] ?>
+
+				<?php echo '</br>' ?>
+				<?php echo $profile[‘id’] ?>
 
 				<h3><?= $profile['home_town'] ?>, <?= $profile['home_country'] ?> - Membre depuis <?= date('F Y', strtotime($profile['created_at'])) ?></h3>
 				
