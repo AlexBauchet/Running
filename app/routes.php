@@ -15,5 +15,6 @@
 		['POST', '/loginUser', 'Login#loginUser', 'loginUser'],
 		['GET', '/logout', 'Login#logout', 'logout'],
 
+		['GET', '/profile/view/[i:id]', 'Profile#view', 'viewProfile'],
 			
 	);

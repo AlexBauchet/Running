@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Manager\ProfileManager;
 
 class ProfileController extends Controller
 {
@@ -17,6 +18,19 @@ class ProfileController extends Controller
 	public function updateProfile()
 	{
 		$this->show('profile/updateProfile');
+	}
+
+	/* Page viewProfile */
+	public function view($id)
+	{
+		// on recupere en bdd l objet en fonction du profil id
+		$profileManager = new ProfileManager();
+
+		$profile = $profileManager->find($id);
+
+		//print_r($profile);
+
+		$this->show('profile/view', ['profile' => $profile]);
 	}
 
 }
