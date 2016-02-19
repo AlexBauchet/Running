@@ -28,6 +28,25 @@ class ProfileController extends Controller
 
 		$profile = $profileManager->find($id);
 
+		// echo $profile['created_at'] . '</br>';
+
+		// echo gettype($profile['created_at']) . '</br>';
+
+		// $date = strtotime($profile['created_at']);
+		// echo '$date : ' . $date . '</br>';
+
+		// $date = new DateTime('now');
+		// echo $date->format('F Y') . '</br>';
+
+		// $date = $profile['created_at'];
+		// echo '$date : ' . $date . '</br>';
+
+    	// $date = strtotime($date);
+    	
+    	// echo date('F Y', strtotime($profile['created_at']));
+
+		//echo date_format($date, 'F Y') . '</br>';
+
 		//print_r($profile);
 
 		$this->show('profile/view', ['profile' => $profile]);

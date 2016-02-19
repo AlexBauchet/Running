@@ -18,7 +18,7 @@
 			<div class="col-md-4">
 			
 				<div class="photo-profil">
-					<h2>Photo de profil</h2>
+					<img src="<?= $profile['profile_picture'] ?>" alt="Photo de profil" width="300" height="200">
 				</div>
 
 				<div class="verifications">
@@ -50,16 +50,16 @@
 			<div class="col-md-6">
 
 				<h2>Bonjour, je m'appelle <?= $profile['firstname'] ?> !</h2>
-				<a type="submit" href="updateProfile.php">Modifier mon profil</a>
+				<a type="submit" href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
 
-				<h3>'VILLE DU MEMBRE', 'PAYS DU MEMBRE' - Membre depuis 'CREATED_AT(MOIS ANNEE)'!</h3>
+				<h3><?= $profile['home_town'] ?>, <?= $profile['home_country'] ?> - Membre depuis <?= date('F Y', strtotime($profile['created_at'])) ?></h3>
 				
-				<p>'DESCRIPTION DU MEMBRE'</p>
+				<p><?= $profile['description'] ?></p>
 
-				<p>Pendant la course, je parle : 'BLABLARUN DU MEMBRE'</p>
+				<p>Pendant la course, je parle : <?= $profile['blablarun'] ?></p>
 
 				<h3>Langues parlées :</h3>
-				<p>'LANGUE_1'</p>
+				<p><?= $profile['language'] ?></p>
 				<p>'LANGUE_2'</p>
 				<p>'LANGUE_3'</p>
 
