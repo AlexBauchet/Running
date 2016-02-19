@@ -20,56 +20,52 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap-theme.min.css') ?>">
 
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/modal.css') ?>">
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/footer.css') ?>">
-
-	
 </head>
+
 <body>
 	
-      <!-- header hors connexion
-     ================================================= -->
+	<!-- header hors connexion
+	================================================= -->
 
-     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
      	
-     	<div class="container">
+		<div class="container">
 
-     		<div class="navbar-header">
-     			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-     				<span class="sr-only">Toggle navigation</span>
-     				<span class="icon-bar"></span>
-     				<span class="icon-bar"></span>
-     				<span class="icon-bar"></span>
-     			</button>
-     			<img src="<?= $this->assetUrl('img/runLogo.jpg') ?>">
-     			<a class="navbar-brand">Running</a>
-     		</div>
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<img src="<?= $this->assetUrl('img/runLogo.jpg') ?>">
+				<a class="navbar-brand">Running</a>
+			</div>
 
-     		<div id="navbar" class="navbar-collapse collapse">
-     			<form class="navbar-form navbar-right" role="form">
+			<div id="navbar" class="navbar-collapse collapse">
+				<form class="navbar-form navbar-right" role="form">
+					
+					<!-- Button trigger modal -->
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
+					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#registerModal">Inscription</button>
+				</form>
+			</div>
 
-     				<!-- Button trigger modal -->
-     				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
-
-     				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#registerModal">Inscription</button>
-
-     			</form>
-     		</div>
-     	</div>
-     </nav>
+		</div>
+	</nav>
 
 	<!-- <h1><?= $this->e($title) ?></h1> -->
 
 
- 		
+
 	<!-- MAIN CONTENT
     ====================================================================== -->
 
-    <section>
+	<section>
 
-    	<?= $this->section('main_content') ?>
+		<?= $this->section('main_content') ?>
 
-    </section>
+	</section>
 
 
 
