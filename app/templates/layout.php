@@ -19,7 +19,7 @@
 	<link rel="stylesheet" href="<?= $this->assetUrl('font-awesome/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/bootstrap-theme.min.css') ?>">
 
-	<link rel="stylesheet" href="<?= $this->assetUrl('css/layout.css') ?>">
+	<link rel="stylesheet" href="<?= $this->assetUrl('css/style.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/modal.css') ?>">
 	<link rel="stylesheet" href="<?= $this->assetUrl('css/footer.css') ?>">
 
