@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.12
+-- version 4.4.10
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Jeu 18 Février 2016 à 14:46
--- Version du serveur :  5.6.25
--- Version de PHP :  5.6.11
+-- Client :  localhost:3306
+-- Généré le :  Ven 19 Février 2016 à 12:20
+-- Version du serveur :  5.5.42
+-- Version de PHP :  7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,10 +23,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `profil`
+-- Structure de la table `profiles`
 --
 
-CREATE TABLE IF NOT EXISTS `profil` (
+CREATE TABLE `profiles` (
   `id` int(11) NOT NULL,
   `firstname` varchar(255) CHARACTER SET utf8 NOT NULL,
   `lastname` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -40,15 +40,22 @@ CREATE TABLE IF NOT EXISTS `profil` (
   `created_at` date NOT NULL,
   `updated_at` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `profiles`
+--
+
+INSERT INTO `profiles` (`id`, `firstname`, `lastname`, `sexe`, `birthdate`, `language`, `avg_speed`, `description`, `blablarun`, `rate`, `created_at`, `updated_at`, `user_id`) VALUES
+(3, 'pauline', 'servant', 'f', '1987-02-19', 'f', '5', 'descripion', '', 4, '2016-02-19', 1, 2);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `running`
+-- Structure de la table `runnings`
 --
 
-CREATE TABLE IF NOT EXISTS `running` (
+CREATE TABLE `runnings` (
   `id` int(11) NOT NULL,
   `name` varchar(255) CHARACTER SET utf8 NOT NULL,
   `level` varchar(255) CHARACTER SET utf8 NOT NULL,
@@ -68,19 +75,20 @@ CREATE TABLE IF NOT EXISTS `running` (
 -- Structure de la table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
+CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `password` varchar(255) CHARACTER SET utf8 NOT NULL,
   `role` int(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
-(1, 'test1@gmail.com', 'azerty1&', 0);
+(1, 'test1@gmail.com', 'azerty1&', 0),
+(2, 'p@g.com', '$2y$10$ZfhZEyobMpQJxVFeiLbVROxsr0bLWUlkLdLCLcRUUjMB4foaG2joK', 0);
 
 -- --------------------------------------------------------
 
@@ -88,7 +96,7 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`) VALUES
 -- Structure de la table `user_running`
 --
 
-CREATE TABLE IF NOT EXISTS `user_running` (
+CREATE TABLE `user_running` (
   `user_id` int(11) NOT NULL,
   `running_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -98,15 +106,15 @@ CREATE TABLE IF NOT EXISTS `user_running` (
 --
 
 --
--- Index pour la table `profil`
+-- Index pour la table `profiles`
 --
-ALTER TABLE `profil`
+ALTER TABLE `profiles`
   ADD PRIMARY KEY (`id`);
 
 --
--- Index pour la table `running`
+-- Index pour la table `runnings`
 --
-ALTER TABLE `running`
+ALTER TABLE `runnings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -120,20 +128,20 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT pour la table `profil`
+-- AUTO_INCREMENT pour la table `profiles`
 --
-ALTER TABLE `profil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `profiles`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT pour la table `running`
+-- AUTO_INCREMENT pour la table `runnings`
 --
-ALTER TABLE `running`
+ALTER TABLE `runnings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
