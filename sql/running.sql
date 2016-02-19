@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost:3306
--- Généré le :  Ven 19 Février 2016 à 12:38
+-- Généré le :  Ven 19 Février 2016 à 12:44
 -- Version du serveur :  5.5.42
 -- Version de PHP :  7.0.0
 
@@ -39,6 +39,7 @@ CREATE TABLE `profiles` (
   `description` varchar(255) CHARACTER SET utf8 NOT NULL,
   `blablarun` int(11) NOT NULL,
   `rate` int(11) NOT NULL,
+  `profile_picture` varchar(255) NOT NULL,
   `created_at` date NOT NULL,
   `updated_at` date NOT NULL,
   `user_id` int(11) NOT NULL
@@ -48,8 +49,8 @@ CREATE TABLE `profiles` (
 -- Contenu de la table `profiles`
 --
 
-INSERT INTO `profiles` (`id`, `firstname`, `lastname`, `gender`, `birthdate`, `home_town`, `home_country`, `language`, `avg_speed`, `description`, `blablarun`, `rate`, `created_at`, `updated_at`, `user_id`) VALUES
-(3, 'pauline', 'servant', 'f', '1987-02-19', '', '', 'f', 5, 'descripion', 0, 4, '2016-02-19', '0000-00-00', 2);
+INSERT INTO `profiles` (`id`, `firstname`, `lastname`, `gender`, `birthdate`, `home_town`, `home_country`, `language`, `avg_speed`, `description`, `blablarun`, `rate`, `profile_picture`, `created_at`, `updated_at`, `user_id`) VALUES
+(3, 'pauline', 'servant', 'f', '1987-02-19', '', '', 'f', 5, 'descripion', 0, 4, '', '2016-02-19', '0000-00-00', 2);
 
 -- --------------------------------------------------------
 
