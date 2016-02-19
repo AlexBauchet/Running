@@ -12,31 +12,33 @@
 					</div>
 				<?php endif; ?>
 
-				<!-- Bouttons Connexion Facebook/Google+ -->
-				<div class="button">
-					<button type="button" class="btn btn-fb" data-dismiss="modal"><i id="iFb" class="fa fa-facebook-official fa-2x"></i>Connexion avec Facebook</button>
-				</div>
-				<div class="button">
-					<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google fa-2x"></i>Connexion avec Google</button>
-				</div>
-				<hr>
-
 				<form class="form-container" method="POST" action="<?= $this->url('loginUser'); ?>">
+
+					<!-- Bouttons Connexion Facebook/Google+ -->
+					<div class="button">
+						<button type="button" class="btn btn-fb" data-dismiss="modal"><i id="iFb" class="fa fa-facebook-official fa-2x"></i>Connexion avec Facebook</button>
+					</div>
+
+					<div class="button">
+						<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google fa-2x"></i>Connexion avec Google</button>
+					</div>
+
+					<hr>
+
 					<div class="form-group">
 						<label for="email" hidden>Email</label>
-						<input type="email" class="form-control" id="email" name="email" placeholder="Email">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Votre email">
 					</div>
 
 					<div class="form-group">
 						<label for="password" hidden>Password</label>
-						<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+						<input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
 					</div>
 
 					<div>
 						<label id="labCgu" for="cgu" class="pure-checkbox">
 							<input id="memoId" name="memoId" type="checkbox"> Se souvenir de moi</a>
 						</label>
-
 						<p id="forgetPwd"><a class="forgetPwd" href="forgetPwd.php">Mot de passe oublié ?</a></p>
 					</div>	
 

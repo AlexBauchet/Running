@@ -4,7 +4,7 @@
 
 	<!-- MAIN CONTENT -->
 	<div class="container">
-		<h1 class="text-center h1-seekRun">Profil</h1>
+		<h1 class="text-center">Profil</h1>
 	</div>
 
 	<!-- Afficher le profil de l utilisateur -->

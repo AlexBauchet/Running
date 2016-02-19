@@ -9,20 +9,23 @@
 		<div class="modal-content"> -->
 
 	<div class="container">
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
 
-			<!-- <form class="form-container" method="POST" action="<?= $this->url('registerUser'); ?>"> -->
-				<form class="modal-body" method="POST" action="<?= $this->url('registerUser'); ?>">
+				<!-- <form class="form-container> -->
+				<form class="form-container" method="POST" action="<?= $this->url('registerUser'); ?>">
 
 					<!-- Bouttons Connexion Facebook/Google+ -->
 					<div class="button">
 						<button type="button" class="btn btn-fb" data-dismiss="modal"><i id="iFb" class="fa fa-facebook-official fa-2x"></i>Inscription avec Facebook</button>
 					</div>
+
 					<div class="button">
 						<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google fa-2x"></i>Inscription avec Google</button>
 					</div>
+
 					<hr>
+
 					<!-- Email -->
 					<div class="form-group <?php if(isset($errors['email'])) echo 'has-error' ?>">				
 						<input type="email" class="form-control" id="email" name="email" value="<?php if(isset($email)) echo $email; ?>" placeholder="Votre email">
@@ -30,6 +33,7 @@
 							<span class="help-block"><?= $errors['email']; ?></span>
 						<?php endif; ?>
 					</div>
+
 					<!-- Mot de passe -->
 					<div class="form-group <?php if(isset($errors['password'])) echo 'has-error' ?>">				
 						<input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe">
@@ -37,6 +41,7 @@
 							<span class="help-block"><?= $errors['password']; ?></span>
 						<?php endif; ?>
 					</div>
+
 					<!-- Confirm Mdp -->
 					<div class="form-group">					
 						<input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmer votre mot de passe">

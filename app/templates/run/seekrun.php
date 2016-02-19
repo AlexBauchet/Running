@@ -4,7 +4,7 @@
 
 	<!-- MAIN CONTENT -->
 	<div class="container">
-		<h1 class="text-center h1-seekRun">Trouver une course</h1>
+		<h1 class="text-center">Trouver une course</h1>
 	</div>
 
 
@@ -17,7 +17,7 @@
 					<i class="fa fa-map fa-2x"></i>
 				</div>	
 
-				<div class="form-group">
+				<div class="form-group divSeekRun">
 					<!-- <label for="city" hidden></label> -->
 					<!-- <span class="input-group-addon"><i class="fa fa-map-o fa-fw"></i></span> -->
 					<input id="citySeek" name="city" type="text" placeholder="Ville de départ" class="form-control inputFieldSeekRun">
@@ -27,7 +27,7 @@
 					<i class="fa fa-calendar fa-2x"></i>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group divSeekRun">
 					<input id="departureDate" name="departureDate" type="date" placeholder="Date" class="form-control inputFieldSeekRun">
 				</div>
 
@@ -35,7 +35,7 @@
 					<i class="fa fa-clock-o fa-2x"></i> 
 				</div>
 
-				<div class="form-group">
+				<div class="form-group divSeekRun">
 
 					<input id="departureTime" name="departureTime" type="text" placeholder="Heure" class="form-control inputFieldSeekRun">
 				</div>
@@ -44,7 +44,7 @@
 					<i class="fa fa-venus-mars fa-2x"></i>
 				</div>
 
-				<div class="form-group">
+				<div class="form-group divSeekRun">
 					<select class="form-control" id="gender" name="gender"> 
 						<option value="" disabled selected>Runners</option>
 						<option value="0">N'importe</option>
@@ -53,11 +53,13 @@
 					</select>
 				</div>
 
-				<div class="form-group">
-					<a type="submit" class="btn btn-danger">Chercher</a>
-				</div>
-
 			</form>
+		</div>
+	</div>
+
+	<div class="container text-center" id="btnChercherSeekRun">
+		<div class="form-group">
+			<a type="submit" class="btn btn-danger">Chercher</a>
 		</div>
 	</div>
 
@@ -72,7 +74,7 @@
 		</div>
 
 		<div class="row" id="addRunButton">
-			<p><a class="btn btn-info btn-lg" href="#" role="button">
+			<p><a class="btn btn-info btn-lg" href="<?= $this->url('createrun') ?>" role="button">
 				<i class="fa fa-fw fa-lg fa-plus-square-o"></i>Ajouter une course</a>
 			</p>
 		</div> 
