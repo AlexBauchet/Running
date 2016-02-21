@@ -1,0 +1,150 @@
+	/* ____________________Page view _____________________*/
+
+			// Affichage de email
+		// $query = $pdo->prepare(' SELECT email FROM users ');
+		// $query->bindValue(':email',$email, PDO::PARAM_STR);
+		// $query->execute();
+
+			// Affichage de profiles
+		// $query = $pdo->prepare('SELECT * FROM profiles');
+		// $query->bindValue(':', $, PDO::PARAM_STR);
+		// $query->execute();
+
+			// Affichage runnnngs
+		// $query = $pdo->prepare(' SELECT * FROM runnings');
+		// $query->bindValue(':', $, PDO::PARAM_STR);
+		// $query->execute();
+
+
+		/* ________________ Page updateProfile _________________ */
+			
+		if(isset($_POST['action']) && ($_POST['action'] == 'add')) {     
+ 
+		// htmlentities -> sécuriser les données reçues via le form
+		$firstName = htmlentities($_POST['firstName']);
+		$lastName = htmlentities($_POST['lastName']);
+		$gender = htmlentities($_POST['gender']);
+		$birthdate = htmlentities($_POST['birthdate']);	
+		$home_town = htmlentities($_POST['home_town']);
+		$home_country = htmlentities($_POST['home_country']);
+		$language = htmlentities($_POST['language']);
+		$avg_speed = htmlentities($_POST['avg_speed']);
+		$description = htmlentities($_POST['description']);
+		$blablarun = htmlentities($_POST['blablarun']);
+		$rate = htmlentities($_POST['rate']);
+
+		// création d'un tableau de session dans le cas ou le user n'a pas réussi à se logger
+		// permet de conserver les champs correctement saisis si d'autres n'ont pas été saisis correctement
+		$_SESSION['lastInfoAdded'] = [];
+
+		$_SESSION['lastInfoAdded']['firstName'] = $firstName;
+		$_SESSION['lastInfoAdded']['lastName'] = $lastName;
+		$_SESSION['lastInfoAdded']['gender'] = $gender;
+		$_SESSION['lastInfoAdded']['birthdate'] = $birthdate;
+		$_SESSION['lastInfoAdded']['home_town'] = $home_town;		
+		$_SESSION['lastInfoAdded']['home_country'] = $home_country;
+		$_SESSION['lastInfoAdded']['language'] = $language;
+		$_SESSION['lastInfoAdded']['avg_speed'] = $avg_speed;
+		$_SESSION['lastInfoAdded']['description'] = $description;
+		$_SESSION['lastInfoAdded']['blablarun'] = $blablarun;
+		$_SESSION['lastInfoAdded']['rate'] = $rate;
+		
+		// initialisation d'un tableau d'erreurs
+		$errors = [];
+
+		// check du champ firstName
+		if(empty($firstName)) {
+			$errors['firstName'] = "Le prénom est obligatoire.";
+		}
+		// check du champ lastName
+		// if(empty($lastName)) {
+		// 	$errors['lastName'] = "Le nom est obligatoire.";
+		// }
+		// check du champ gender
+		if(empty($gender)) {
+			$errors['gender'] = "Le genre est obligatoire.";
+		}
+		// check du champ birthdate
+		if(empty($birthdate)) {
+			$errors['birthdate'] = "Veuillez indiquer votre date de naissance";
+		}		
+		// check du champ home_town
+		if(empty($home_town)) {
+			$errors['home_town'] = "Veuillez indiquer le ville";
+		}
+		// check du champ home_country
+		if(empty($home_country)) {
+			$errors['home_country'] = "Veuillez indiquer le pays";
+		}
+		// check du champ language
+		if(empty($language)) {
+			$errors['language'] = "Veuillez indiquer la langue";
+		}
+		// check du champ avg_speed
+		if(empty($avg_speed)) {
+			$errors['avg_speed'] = "Veuillez indiquer votre vitesse moyenne";
+		}
+		// check du champ description
+		if(empty($description)) {
+			$errors['description'] = "Veuillez compléter la description du jeu.";
+		}
+		// check du champ blablarun
+		if(empty($blablarun)) {
+			$errors['blablarun'] = "Veuillez compléter le blablarun.";
+		}
+
+			// s'il n'y a pas d'erreur, j'enregistre le jeu dans la bdd
+		if(empty($errors)) {
+
+			print_r($_POST);
+
+			$query = $pdo->prepare('INSERT INTO profiles (firstname, lastname, gender, birthdate, 
+														home_town, home_country, language, avg_speed, description,
+														blablarun, rate, created_at, updated_at, user_id) 
+									VALUES (:firstname, :lastname, :gender, :birthdate, :home_town, :home_country, :language, :avg_speed, :description, :blablarun, :rate, :created_at, :updated_at, :user_id)');
+			$query->bindValue(':firstname', $firstname, PDO::PARAM_STR);
+			$query->bindValue(':lastname', $lastname, PDO::PARAM_STR);
+			$query->bindValue(':gender', $gender, PDO::PARAM_STR);
+			$query->bindValue(':birthdate', $birthdate, PDO::PARAM_INT);	
+
+			$query->bindValue(':home_town', $home_town, PDO::PARAM_STR);
+			$query->bindValue(':home_country', $home_country, PDO::PARAM_STR);
+			$query->bindValue(':language', $language, PDO::PARAM_STR);
+			$query->bindValue(':avg_speed', $avg_speed, PDO::PARAM_INT);
+			$query->bindValue(':description', $description, PDO::PARAM_STR);
+
+			$query->bindValue(':blablarun', $blablarun, PDO::PARAM_STR);
+			$query->bindValue(':rate', $rate, PDO::PARAM_INT);
+			$query->bindValue(':created_at', $created_at, PDO::PARAM_INT);
+			$query->bindValue(':updated_at', $updated_at, PDO::PARAM_INT);
+			$query->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+
+			if(!$query->execute()) {     // éxécute la requête SQL
+				echo "Une erreur est survenue à l'enregistrement";
+			}
+
+			// le jeu a t il bien été inséré en bdd ?
+			if($query->rowCount() > 0) {
+				// récupération du jeu depuis la bdd pour l'affecter à une variable de session
+				$query = $pdo->prepare('SELECT * FROM profiles WHERE id = :id');
+				$query->bindValue(':id', $pdo->lastInsertId(), PDO::PARAM_INT);
+				$query->execute();
+				$resultAdd = $query->fetch();
+
+				// suppression du tableau de session créé pour récupérer les champs correctement saisis
+				unset($_SESSION['lastInfoAdded']);  
+
+				$_SESSION['message'] = "Votre jeu a bien été rajouté.";
+
+				header("Location: ../templates/profile/view.php");
+				die();
+			}
+		}
+			else {
+			$_SESSION['lastInfoAdded'] = $errors;
+
+			// print_r($errors);
+
+			header("Location: ../templates/profile/view.php");
+			die();
+		}

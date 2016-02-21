@@ -88,14 +88,14 @@
 					<p>20 km : </p>
 					<form>
 						<select name="time_20km" size="1">
-							<option>-1h30
-							<option>entre 1h30 et 1h40
-							<option>entre 1h40 et 1h50
-							<option>entre 1h50 et 2h00
-							<option>entre 2h00 et 2h10
-							<option>entre 2h10 et 2h20
-							<option>entre 2h20 et 2h30	
-							<option>+2h30 min
+							<option>-1h30</option>
+							<option>entre 1h30 et 1h40</option>
+							<option>entre 1h40 et 1h50</option>
+							<option>entre 1h50 et 2h00</option>
+							<option>entre 2h00 et 2h10</option>
+							<option>entre 2h10 et 2h20</option>
+							<option>entre 2h20 et 2h30</option>	
+							<option>+2h30 min</option>
 						</select>
 					</form>	
 					
