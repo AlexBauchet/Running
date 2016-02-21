@@ -4,7 +4,7 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-4 col-md-offset-4">
 
 				<?php if(isset($errors['login'])): ?>
 					<div class="alert alert-danger">
@@ -12,7 +12,7 @@
 					</div>
 				<?php endif; ?>
 
-				<form class="form-container" method="POST" action="<?= $this->url('loginUser'); ?>">
+				<form class="form-container formLoginRegister" method="POST" action="<?= $this->url('loginUser'); ?>">
 
 					<!-- Bouttons Connexion Facebook/Google+ -->
 					<div class="button">
@@ -20,10 +20,12 @@
 					</div>
 
 					<div class="button">
-						<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google fa-2x"></i>Connexion avec Google</button>
+						<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google fa-2x"></i>Connexion avec Google+</button>
 					</div>
 
-					<hr>
+					<div class="text-center ouEmail">
+						<p>- ou connectez-vous avec votre email -</p>
+					</div>
 
 					<div class="form-group">
 						<label for="email" hidden>Email</label>
@@ -42,7 +44,7 @@
 						<p id="forgetPwd"><a class="forgetPwd" href="forgetPwd.php">Mot de passe oublié ?</a></p>
 					</div>	
 
-					<div class="btn-form">
+					<div class="btn-form btnModal">
 						<button type="submit" class="btn btn-primary">Connexion</button>
 					</div>
 

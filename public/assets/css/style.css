@@ -80,6 +80,33 @@ h3 {
 
 
 
+
+/* ==========================================================================
+   UPDATEPROFILE
+   ========================================================================== */
+
+.form-group-updateProfile {
+	width: 90%;
+}
+
+.blablarun {
+	/*margin-right: 10px;*/
+}
+
+.btnRadioBlablarun {
+	display: block;
+	/*padding-top: 8px;*/
+}
+
+.checkboxLanguages {
+	display: block;
+}
+
+.btnUpdateProfile {
+	margin-top: 20px;
+}
+
+
 /* ==========================================================================
    SEEKRUN
    ========================================================================== */
@@ -148,7 +175,7 @@ h3 {
 }
 
 .form-group-createrun {
-    width: 90%;
+	width: 90%;
 }
 
 .col-md-12.mapsCreateRun.text-center {
@@ -184,6 +211,19 @@ input[type="range"]::-webkit-slider-thumb {
    LOGIN & REGISTER
    ========================================================================== */
 
+.hr {
+	display: inline-block;
+}
+
+.ouEmail {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.formLoginRegister {
+	margin-top: 40px;
+}
+
 .modal-content {
 	width: 400px;
 }
@@ -195,17 +235,21 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .btn-fb {
-	width: 275px;
+	width: 100%;
 	background-color: #4c67a1;
-	color: #ffffff;  /* white */
+	color: #fff;  /* white */
 	border: 1px solid #4c67a1;
 }
 
 .btn-google {
-	width: 275px;
+	width: 100%;
 	background-color: #fff;  /* white */
 	color: #000;  /* black */
 	border: 1px solid #ddd;
+}
+
+.btnModal {
+	margin-top: 20px;
 }
 
 /* .btn-google:hover {
@@ -224,7 +268,7 @@ input {
 .modal-footer {
 	text-align: left;
 	color: #fff; /* white */
-	margin-top: 20px;
+	margin-top: 30px;
 }
 
 label {
