@@ -3,6 +3,11 @@
    ALL VIEWS
    ========================================================================== */
 
+@font-face {
+	font-family: 'Mona-Shark';
+    src: url('../fonts/Mona-Shark.otf');
+}
+
 @keyframes slidy {
 	0% { left: 0%; }
 	20% { left: 0%; }
@@ -70,6 +75,11 @@ h3 {
 
 .hr-footer {
 	border-top: 1px solid #fff; /* blanc */
+}
+
+#bgvid {
+	 
+	 
 }
 
 

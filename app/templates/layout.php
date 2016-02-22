@@ -38,8 +38,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<img src="<?= $this->assetUrl('img/runLogo.jpg') ?>">
-				<a class="navbar-brand">Running</a>
+				<a class="navbar-brand"><font size="7" face="Mona-Shark" color="#3D41B2">Running</a></font>
 			</div>
 
 			<div id="navbar" class="navbar-collapse collapse">
@@ -47,7 +46,7 @@
 					
 					<!-- Button trigger modal -->
 					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#registerModal">Inscription</button>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Inscription</button>
 				</form>
 			</div>
 

@@ -38,7 +38,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Running</a>
+				<a class="navbar-brand"><font size="7" face="Mona-Shark" color="#3D41B2">Running</a></font>
 			</div>
 
 			<div id="navbar" class="navbar-collapse collapse">

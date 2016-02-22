@@ -4,16 +4,24 @@
 
 	<!-- Slider -->
 
-	<div id="slider">
+	<!-- <div id="slider">
 		<figure>
-
-			<img src="<?= $this->assetUrl('img/running.jpeg') ?>">
+ -->
+			<!-- <img src="<?= $this->assetUrl('img/running.jpeg') ?>">
 			<img src="<?= $this->assetUrl('img/running2.jpg') ?>">
 			<img src="<?= $this->assetUrl('img/running3.jpg') ?>">
-			<img src="<?= $this->assetUrl('img/running4.png') ?>">
+			<img src="<?= $this->assetUrl('img/running4.png') ?>"> -->
 
-		</figure>	
-	</div>
+			<div class="text-center">
+				<video autoplay poster="<?= $this->assetUrl('img/runningHP.jpg')?>" id="bgvid" loop controls width="1280" heigth="720">
+			   	 	<source src="<?= $this->assetUrl('img/runningHP.webm')?>" type="video/webm">
+			    	<source src="<?= $this->assetUrl('img/runningHP.mp4')?>" type="video/mp4">
+			   </video>
+		   </div>
+
+
+	<!-- 	</figure>	
+	</div> -->
 
 
 	<!-- <div class="jumbotron"> -->
