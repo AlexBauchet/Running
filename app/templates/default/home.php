@@ -34,12 +34,6 @@
 
 	<hr class="hr-footer">
 
-
-	<!-- INCLUDE MODALS SUR HOMEPAGE UNIQUEMENT -->
-	<?php include(__DIR__.'/modal/login.php'); ?>
-	<?php include(__DIR__.'/modal/register.php'); ?>
-
-
 	</div> <!-- class="container"> -->
        	
 
