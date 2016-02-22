@@ -46,8 +46,8 @@
 				<form class="navbar-form navbar-right" role="form">
 					
 					<!-- Button trigger modal -->
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#registerModal">Inscription</button>
+					<a type="button" class="btn btn-success" href="<?= $this->url('login') ?>">Connexion</a>
+					<a type="button" class="btn btn-success" href="<?= $this->url('register') ?>">Inscription</a>
 				</form>
 			</div>
 
