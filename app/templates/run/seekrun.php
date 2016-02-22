@@ -7,7 +7,6 @@
 		<h1 class="text-center">Trouver une course</h1>
 	</div>
 
-
 	<!-- Menu trouver une course -->
 	<div class="container containerSeekRun">
 		<div class="row formSeekRun">

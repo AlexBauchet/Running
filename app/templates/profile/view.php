@@ -66,10 +66,8 @@
 					<a type="submit" href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
 				<?php endif; ?>
 
-				<?php echo $w_user['id'] ?>
-
-				<?php echo '</br>' ?>
-				<?php echo $profile['id'] ?>
+				<!-- <?php echo $w_user['id'] ?> -->
+				<!--<?php echo $profile['id'] ?> renvoie 3-->  
 
 				<h3><?= $profile['home_town'] ?>
 				<?= $profile['home_country'] ?> 
@@ -77,12 +75,12 @@
 				
 				<p><?= $profile['description'] ?></p>
 
-				<p>Pendant la course, je parle : <?= $profile['blablarun'] ?>'Blabla'</p>
+				<p>Pendant la course, je parle : <?= $blablarun ?></p>
 
 				<h3>Langues parlées :</h3>
-				<p><?= $profile['language'] ?></p>
-				<p>'LANGUE_2'</p>
-				<p>'LANGUE_3'</p>
+				<p><?php foreach ($languages as $language) : ?>
+						<?php echo $language ?>
+				<?php endforeach; ?></p>
 
 				<h3>Mes exploits :</h3>
 				<p>10 km : 'TEMPS_10KM'</p>

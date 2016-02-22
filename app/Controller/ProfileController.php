@@ -42,8 +42,23 @@ class ProfileController extends Controller
 
 		//echo date_format($date, 'F Y') . '</br>';
 		//print_r($profile);
-	$this->show('profile/view', ['profile' => $profile]);
+
+		$languages = explode(',', $profile['language']);
+
+		$blablarun = 'pas du tout';
+		if ($profile['blablarun'] == 1) {
+			$blablarun = 'un peu';
+		}
+		if ($profile['blablarun'] == 2) {
+			$blablarun = 'beaucoup';
+		}
+
+
+		$this->show('profile/view', ['profile' => $profile, 'languages' => $languages, 'blablaruns' => $blablarun]);
+
 	}
+
+
 }
 
 			

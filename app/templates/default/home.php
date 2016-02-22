@@ -2,6 +2,15 @@
 
 <?php $this->start('main_content') ?>
 
+
+	<?php if(isset($_SESSION['message'])): ?>
+		<div class="alert alert-danger">
+			<p><?= $_SESSION['message'] ?></p>
+			<?php unset($_SESSION['message']); ?>
+		</div>
+	<?php endif; ?>
+
+
 	<!-- Slider -->
 
 	<!-- <div id="slider">
