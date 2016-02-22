@@ -38,20 +38,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand"><font size="7" face="Mona-Shark" color="#3D41B2">Running</a></font>
+				<a class="navbar-brand" href="#"><font size="7" face="Mona-Shark" color="#3D41B2">Running</a></font>
 			</div>
 
 			<div id="navbar" class="navbar-collapse collapse">
 				<form class="navbar-form navbar-right" role="form">
 					
-					<!-- Button trigger modal -->
-<<<<<<< HEAD
-					<button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal">Connexion</button>
-					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">Inscription</button>
-=======
 					<a type="button" class="btn btn-success" href="<?= $this->url('login') ?>">Connexion</a>
-					<a type="button" class="btn btn-success" href="<?= $this->url('register') ?>">Inscription</a>
->>>>>>> origin/master
+					<a type="button" class="btn btn-primary" href="<?= $this->url('register') ?>">Inscription</a>
+
 				</form>
 			</div>
 
