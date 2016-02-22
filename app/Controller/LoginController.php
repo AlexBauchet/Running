@@ -56,8 +56,6 @@ class LoginController extends Controller
 		$authentificationManager = new AuthentificationManager();
 		$authentificationManager->logUserOut();
 
-		$_SESSION['logout'] = true;
-
 		// création d'un msg de déconnexion en session
 		$_SESSION['message'] = "Vous avez bien été déconnecté.";
 
