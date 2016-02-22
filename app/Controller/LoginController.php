@@ -31,9 +31,11 @@ class LoginController extends Controller
 		if($resultUser) {
 			// Instanciation d'un object de type AuthentificationManager
 			$authentificationManager = new AuthentificationManager();
+
 			// Cette méthode teste si le mot de passe est valide, $password ici est en clair
 			if($authentificationManager->isValidLoginInfo($email, $password)) {
 				$authentificationManager->logUserIn($resultUser);
+
 				// Redirection
 				$this->redirectToRoute('seekrun');
 			}
@@ -48,13 +50,23 @@ class LoginController extends Controller
 		$this->show('run/seekrun', ['errors' => $errors]);
 	}
 
-	// public function logout() {
-	// 	// Instanciation d'un object de type AuthentificationManager
-	// 	$authentificationManager = new AuthentificationManager();
-	// 	$authentificationManager->logUserOut();
+	public function logout() {
+	
+		// Instanciation d'un object de type AuthentificationManager
+		$authentificationManager = new AuthentificationManager();
+		$authentificationManager->logUserOut();
 
-	// 	// Redirection
-	// 	$this->redirectToRoute('home');
-	//}
+		$_SESSION['logout'] = true;
+
+		// création d'un msg de déconnexion en session
+		$_SESSION['message'] = "Vous avez bien été déconnecté.";
+
+		// Redirection
+		$this->redirectToRoute('home');
+	}
 	
 }
+
+
+
+
