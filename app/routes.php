@@ -15,6 +15,7 @@
 		['GET', '/profile/logout', 'Login#logout', 'logout'],
 
 		['GET', '/profile/view/[i:id]', 'Profile#view', 'viewProfile'],
-		['GET', '/profile/updateProfile', 'Profile#updateProfile', 'updateProfile'],
+		['GET', '/profile/updateProfile', 'UpdateProfile#updateProfile', 'updateProfile'],
+		['POST', '/profile/updateProfileSubmit', 'UpdateProfile#updateProfileSubmit', 'updateProfileSubmit'],
 
 	);

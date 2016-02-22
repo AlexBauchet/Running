@@ -21,26 +21,9 @@
 					<img src="<?= $profile['profile_picture'] ?>" alt="Photo de profil" width="300" height="200">
 				</div>
 
-				<div class="verifications">
+				<div class="nbRuns">
 					<div>
-						<h2>Vérifications</h2>
-					</div>
-
-					<div>
-						<p>Adresse e-mail</p>
-						<!-- <p><?php echo $email['email']; ?></p> -->
-
-						<!-- <div class="form-group <?php if(isset($_SESSION['addInfoErrors']['email'])) echo 'has-error'; ?>">
-						<label for="email">Adresse e-mail</label>
-						<input type="text" class="form-control" id="email" name="email" placeholder="email" value="<?php if(isset($_SESSION['lastGameAdded']['gameName'])) echo $_SESSION['lastGameAdded']['gameName']; ?>">
-						<?php if(isset($_SESSION['addGameErrors']['gameName'])): ?>
-							 <span class="help-block">
-							 	<?php echo ($_SESSION['addGameErrors']['gameName']); ?>
-							 </span>
-						<?php endif; ?>
-					</div> -->
-
-						<p>Nombres de runs</p>
+						<h2>Nombres de runs : </h2>
 						<!-- <p><?php echo $runs['name']; ?></p> -->
 					</div>
 				</div>
@@ -62,12 +45,9 @@
 
 				<h2>Bonjour, je m'appelle <?= $profile['firstname'] ?> !</h2>
 				
-				<?php if ($w_user['id'] == $profile['id']) : ?>
-					<a type="submit" href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
+				<?php if ($w_user['id'] == $profile['user_id']) : ?>
+					<a href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
 				<?php endif; ?>
-
-				<!-- <?php echo $w_user['id'] ?> -->
-				<!--<?php echo $profile['id'] ?> renvoie 3-->  
 
 				<h3><?= $profile['home_town'] ?>
 				<?= $profile['home_country'] ?> 

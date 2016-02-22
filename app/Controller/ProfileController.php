@@ -12,6 +12,7 @@ class ProfileController extends Controller
 	{
 		$this->show('profile/userPage');
 	}
+	
 	/* Page updateProfile */
 	public function updateProfile()
 	{
@@ -53,8 +54,7 @@ class ProfileController extends Controller
 			$blablarun = 'beaucoup';
 		}
 
-
-		$this->show('profile/view', ['profile' => $profile, 'languages' => $languages, 'blablaruns' => $blablarun]);
+		$this->show('profile/view', ['profile' => $profile, 'languages' => $languages, 'blablarun' => $blablarun]);
 
 	}
 
