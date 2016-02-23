@@ -33,7 +33,7 @@
 	</div> -->
 
 
-	<div class="container">
+	<div class="container container-main-content">
 		
 		<div class="row mapsHome">
 			<div class="col-md-12 mapsHomeMargin">

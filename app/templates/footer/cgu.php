@@ -10,7 +10,7 @@
 	<br/>
 
 	<!-- Menu créer une course -->
-	<div class="container">
+	<div class="container container-main-content">
 		<div class="row">
 
 			<div class="col-md-2"></div>
@@ -108,13 +108,12 @@
 
 				</div>
 
-				<form class="form-horizontal">
-
 			</div>
 
 			<div class="col-md-2"></div>
 
 		</div>
+		
 	</div>		
 
 

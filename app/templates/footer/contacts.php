@@ -10,7 +10,7 @@
 	<br/>
 
 	<!-- Menu créer une course -->
-	<div class="container">
+	<div class="container container-main-content">
 		<div class="row">
 
 			<div class="col-md-2"></div>
@@ -22,6 +22,7 @@
 					<p>75000 Paris</p>
 					<p>France</p>
 				</div>
+			</br>
 				<div id="contactTel">
 					<h3>Par téléphone</h3>
 					<p>+ 33 (0) 1 23 45 67 89</p>

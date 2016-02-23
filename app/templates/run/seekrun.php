@@ -45,7 +45,7 @@
 
 				<div class="form-group divSeekRun">
 					<select class="form-control" id="gender" name="gender"> 
-						<option value="" disabled selected>Runners</option>
+						<option value="" disabled selected>Organisateur</option>
 						<option value="0">N'importe</option>
 						<option value="1">Homme</option>
 						<option value="2">Femme</option>
@@ -73,8 +73,8 @@
 		</div>
 
 		<div class="row" id="addRunButton">
-			<p><a class="btn btn-info btn-lg" href="<?= $this->url('createrun') ?>" role="button">
-				<i class="fa fa-fw fa-lg fa-plus-square-o"></i>Ajouter une course</a>
+			<p><a class="btn btn-info btn-danger" href="<?= $this->url('createrun') ?>" role="button">
+				<i class="fa fa-fw fa-lg fa-plus-square-o"></i>Proposer une course</a>
 			</p>
 		</div> 
 

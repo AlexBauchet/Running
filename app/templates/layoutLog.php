@@ -53,8 +53,8 @@
 							<li><a href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a></li>
 							<li><a href="<?= $this->url('logout') ?>">Se déconnecter</a></li>
 							<li role="separator" class="divider"></li>
-							<li><a href="#">Aide</a></li>
-							<li><a href="#">Signaler un problème</a></li>
+							<li><a href="<?= $this->url('cgu') ?>">CGU</a></li>
+							<li><a href="<?= $this->url('contacts') ?>">Contacts</a></li>
 
 						</ul>
 					</li>
@@ -91,7 +91,7 @@
 				<div class="col-md-3 col-md-offset-4"> 		
 					<h2 class="h2-footer">Aide</h2>
 					<p><a class="liensFooter" href="<?= $this->url('contacts') ?>">Contacts</a></p>
-					<p><a class="liensFooter" href="#">CGU</a></p>
+					<p><a class="liensFooter" href="<?= $this->url('cgu') ?>">CGU</a></p>
 				</div>
 
 				<div class="col-md-3"> 

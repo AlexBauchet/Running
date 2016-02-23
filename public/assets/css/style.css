@@ -64,6 +64,14 @@ footer {
 	width: 85%;
 }
 
+.container-main-content {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+}
+
 
 /* ==========================================================================
    HOME
@@ -79,9 +87,9 @@ footer {
 	text-align: center;	
 }
 
-.mapsHomeMargin {
+/*.mapsHomeMargin {
 	margin-bottom: 40px;
-}
+}*/
 
 
 #bgvid {
@@ -117,10 +125,23 @@ footer {
 
 .checkboxLanguages {
 	display: block;
+	margin-right: 15px;
+}
+
+#drapeaux {
+	display: flex;
 }
 
 .btnUpdateProfile {
 	margin-top: 20px;
+}
+
+.distancesOfficielles {
+	display: flex;
+}
+
+.selectDistance {
+	margin-left: 15px;
 }
 
 
@@ -168,7 +189,7 @@ footer {
 }
 
 .fa-map, .fa-calendar, .fa-clock-o, .fa-venus-mars {
-	color: #fff;
+	color: #565a5c; /* gris foncé */
 	margin-right: 5px;
 }
 
@@ -231,7 +252,6 @@ input[type="range"]::-webkit-slider-thumb {
 .boxLoginRegister {
 	border: 1px solid #565a5c; /* gris foncé */
 	margin-top: 30px;
-	margin-bottom: 30px;
 	padding-left: 15px;
 	padding-right: 15px;
 	background-color: #edefed; /* gris entre clair et foncé */
