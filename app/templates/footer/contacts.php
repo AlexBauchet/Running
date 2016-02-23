@@ -64,15 +64,5 @@
 		</div>
 	</div>		
 	
-						
-	<!-- Affichage de la ligne du footer -->
-	
-	<div class="container">
-
-
-		<hr class="hr-footer">
-
-	</div> <!-- class="container"> -->
-       	
 
 <?php $this->stop('main_content') ?>

@@ -62,12 +62,10 @@
 				</form>
 
 			</div>
+			
 		</div>
-	<!-- </div> Div modal  -->
 
-		<hr class="hr-footer">
-
-	</div> <!-- class="container"> -->		
+	</div> 
 
 
 <?php $this->stop('main_content') ?>

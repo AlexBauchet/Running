@@ -116,15 +116,6 @@
 
 		</div>
 	</div>		
-	
-						
-	<!-- Affichage de la Map et ajouter une course -->
-	
-	<div class="container">
 
-		<hr class="hr-footer">
-
-	</div> <!-- class="container"> -->
-       	
 
 <?php $this->stop('main_content') ?>

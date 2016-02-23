@@ -77,14 +77,8 @@
 				<i class="fa fa-fw fa-lg fa-plus-square-o"></i>Ajouter une course</a>
 			</p>
 		</div> 
-	<!-- Ne pas fermer la </div class='container'> ici.. Se ferme après le footer --> 
 
-
-		<!-- NE PAS TOUCHER -->
-		<hr class="hr-footer">
-
-
-	</div> <!-- /container -->        
+	</div>    
 
 
 <?php $this->stop('main_content') ?>

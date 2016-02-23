@@ -80,6 +80,7 @@
 	<!-- Affichage de la Map et ajouter une course -->
 	
 	<div class="container">
+		
 		<div class="row mapsCreateRun">
 			<div class="col-md-12 mapsCreateRun text-center">
 				<p>Valider le point de départ</p>
@@ -88,9 +89,7 @@
 			</div>
 		</div>
 
-		<hr class="hr-footer">
-
-	</div> <!-- class="container"> -->
+	</div>
        	
 
 <?php $this->stop('main_content') ?>
