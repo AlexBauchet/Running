@@ -50,7 +50,7 @@
 							<input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" placeholder="Confirmer votre mot de passe">
 						</div>
 
-						<p class="cgu">En créant un compte, vous acceptez les <a>Conditions générales</a> et la <a>Politique de confidentialité</a>.</p>
+						<p class="cgu">En créant un compte, vous acceptez les <a href="<?= $this->url('cgu') ?>">Conditions générales d'utilisation</a>.</p>
 
 						<div class="btn-form btnModal">
 							<button type="submit" class="btn btn-primary">Inscription</button>
