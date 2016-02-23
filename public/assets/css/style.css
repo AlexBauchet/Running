@@ -22,12 +22,10 @@
 
 body {
 	padding-top: 50px;
-	/*padding-bottom: 20px;*/
 	/*background: url(../img/wall.jpg);*/
 	background-color: #f5f5f5; /* gris clair */
 	color: #565a5c; /* gris foncé */
 }
-
 
 body { margin: 0; } 
 	#slider { overflow: hidden; }
@@ -85,16 +83,6 @@ footer {
 
 .mapsHome {
 	text-align: center;	
-}
-
-/*.mapsHomeMargin {
-	margin-bottom: 40px;
-}*/
-
-
-#bgvid {
-	 
-	 
 }
 
 
@@ -199,9 +187,6 @@ footer {
    CREATERUN PAGE
    ========================================================================== */
 
-.form-group {
-	margin-bottom: 25px;
-}
 
 #addRunButton {
 	text-align: center;
@@ -212,8 +197,16 @@ footer {
 	width: 90%;
 }
 
+.levelBar {
+	display: flex;
+}
+
 .col-md-12.mapsCreateRun.text-center {
     margin-bottom: 40px;
+}
+
+.val {
+	margin-left: 15px;
 }
 
 input[type="range"].rng {
@@ -239,6 +232,8 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
     color: #000;  
 }
+
+
 
 
 /* ==========================================================================
@@ -294,10 +289,6 @@ input[type="range"]::-webkit-slider-thumb {
 	margin-top: 20px;
 }
 
-/* .btn-google:hover {
-	color: #ffffff;
-}  */
-
 input {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -348,7 +339,6 @@ i {
 }
 
 
-
 /* ==========================================================================
    CGU
    ========================================================================== */
@@ -363,7 +353,6 @@ i {
 	padding: 10px;
 	text-align: justify;
 }
-
 
 
 /* ==========================================================================

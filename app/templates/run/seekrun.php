@@ -35,8 +35,19 @@
 				</div>
 
 				<div class="form-group divSeekRun">
-
-					<input id="departureTime" name="departureTime" type="text" placeholder="Heure" class="form-control inputFieldSeekRun">
+					<!-- <input id="departureTime" name="departureTime" type="text" placeholder="Heure" class="form-control inputFieldSeekRun"> -->
+						<select class="form-control" id="departureTime" name="departureTime"> 
+							<option value="0">Toute la journée</option>
+							<option value="1">avant 6h</option>
+							<option value="2">entre 6h et 8h</option>
+							<option value="3">entre 8h et 10h</option>
+							<option value="4">entre 10h et midi</option>
+							<option value="5">entre midi et 14h</option>
+							<option value="6">entre 14h et 16h</option>
+							<option value="6">entre 16h et 18h</option>
+							<option value="6">entre 18h et 20h</option>
+							<option value="6">après 20h</option>
+						</select>
 				</div>
 
 				<div class="form-group">
@@ -58,7 +69,7 @@
 
 	<div class="container text-center" id="btnChercherSeekRun">
 		<div class="form-group">
-			<a type="submit" class="btn btn-danger">Chercher</a>
+			<a type="submit" class="btn btn-danger">Chercher les courses correspondantes</a>
 		</div>
 	</div>
 
@@ -73,7 +84,7 @@
 		</div>
 
 		<div class="row" id="addRunButton">
-			<p><a class="btn btn-info btn-danger" href="<?= $this->url('createrun') ?>" role="button">
+			<p><a class="btn btn-primary" href="<?= $this->url('createrun') ?>" role="button">
 				<i class="fa fa-fw fa-lg fa-plus-square-o"></i>Proposer une course</a>
 			</p>
 		</div> 
