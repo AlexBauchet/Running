@@ -5,7 +5,7 @@
 
 @font-face {
 	font-family: 'Mona-Shark';
-	src: url('../fonts/Mona-Shark.otf');
+    src: url('../fonts/Mona-Shark.otf');
 }
 
 @keyframes slidy {
@@ -22,10 +22,9 @@
 
 body {
 	padding-top: 50px;
-	/*padding-bottom: 20px;*/
-	/*background: url(../img/wall.jpg);*/
-	background-color: #f5f5f5; /* gris clair */
-	color: #565a5c; /* gris foncé */
+	padding-bottom: 20px;
+	background: url(../img/wall.jpg);
+	color: #fff; /* blanc */
 }
 
 
@@ -55,19 +54,6 @@ h3 {
 	font-size: 18px;
 }
 
-footer {
-	background: url(../img/wall.jpg);
-}
-
-.hr-footer {
-	border-top: 1px solid #000; /* noir */
-}
-
-.hr-footer-new {
-	border-top: 1px solid #f5f5f5; /* gris clair */
-	width: 85%;
-}
-
 
 /* ==========================================================================
    HOME
@@ -87,6 +73,9 @@ footer {
 	margin-bottom: 40px;
 }
 
+.hr-footer {
+	border-top: 1px solid #fff; /* blanc */
+}
 
 #bgvid {
 	 
@@ -138,6 +127,10 @@ footer {
 
 .mapsSekkRunMargin {
 	margin-bottom: 40px;
+}
+
+.hr-footer {
+	border-top: 1px solid #fff; /* blanc */
 }
 
 .containerSeekRun {
@@ -323,24 +316,6 @@ i {
 }
 
 
-
-/* ==========================================================================
-   CGU
-   ========================================================================== */
-
-#scrollZone {
-	overflow: scroll; 
-	border: #000 1px solid;
-	width: 80%;
-	height: 400px;
-	background-color: #fff; /* white */
-	color: #000;
-	padding: 10px;
-	text-align: justify;
-}
-
-
-
 /* ==========================================================================
    FOOTER
    ========================================================================== */
@@ -371,6 +346,10 @@ i {
 
 .liensFooter {
 	color: #fff;
+}
+
+.col-md-8.col-md-offset-2 {
+	margin-top: 30px;
 }
 
 #copyright {

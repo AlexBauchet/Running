@@ -90,7 +90,7 @@
 
 				<div class="col-md-3 col-md-offset-4"> 		
 					<h2 class="h2-footer">Aide</h2>
-					<p><a class="liensFooter" href="#">Contacts</a></p>
+					<p><a class="liensFooter" href="<?= $this->url('contacts') ?>">Contacts</a></p>
 					<p><a class="liensFooter" href="#">CGU</a></p>
 				</div>
 
@@ -101,6 +101,8 @@
 
 			</div>
 		</div>
+
+		<hr class="hr-footer-new">
 
 		<div class="container">
 			<div id="footer-rs" class="row">
