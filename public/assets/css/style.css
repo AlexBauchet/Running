@@ -232,13 +232,22 @@ input[type="range"]::-webkit-slider-thumb {
 	display: inline-block;
 }
 
+.boxLoginRegister {
+	border: 1px solid #565a5c; /* gris foncé */
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background-color: #edefed; /* gris entre clair et foncé */
+}
+
 .ouEmail {
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
 
 .formLoginRegister {
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 .modal-content {
@@ -284,7 +293,7 @@ input {
 
 .modal-footer {
 	text-align: left;
-	color: #fff; /* white */
+	/*color: #fff;*/ /* white */
 	margin-top: 30px;
 }
 
@@ -303,7 +312,7 @@ a:hover {
 
 .cgu {
 	font-size: 0.9em;
-	color: #fff; /* white */
+	/*color: #fff;*/ /* white */
 }
 
 .btn-form {
