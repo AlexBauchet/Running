@@ -90,7 +90,7 @@
 			</div>
 		</div>
 
-		<hr class="hr-footer-new">
+		<hr class="hr-footer">
 		
 		<div class="container">
 			<div id="footer-rs" class="row">

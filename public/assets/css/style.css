@@ -60,10 +60,6 @@ footer {
 }
 
 .hr-footer {
-	border-top: 1px solid #000; /* noir */
-}
-
-.hr-footer-new {
 	border-top: 1px solid #f5f5f5; /* gris clair */
 	width: 85%;
 }
@@ -353,6 +349,11 @@ i {
 /* ==========================================================================
    FOOTER
    ========================================================================== */
+
+footer {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 
 #footer-rs {
 	text-align: center;
