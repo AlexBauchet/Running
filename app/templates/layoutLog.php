@@ -43,7 +43,7 @@
 
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="<?= $this->url('viewProfile') ?>"><?= $w_user['email']; ?></a></li>
+					<li><a href="<?= $this->url('viewProfile', ['id' => $w_user['id']]) ?>"><?= $w_user['email']; ?></a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-1x"></i><span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -73,11 +73,18 @@
 	<!-- MAIN CONTENT
     ====================================================================== -->
 
-    <section>
-    
-    	<?= $this->section('main_content') ?>
+	<section>
 
-    </section>
+		<!-- message de conf ou d'erreur apres creation d'un run -->
+		<?php if(isset($_SESSION['message'])) : ?>
+			<?= $_SESSION['message']; ?>
+			<?php unset($_SESSION['message']); ?>
+		<?php endif; ?>
+
+
+		<?= $this->section('main_content') ?>
+
+	</section>
 
 
 

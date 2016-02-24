@@ -10,7 +10,7 @@
 		['POST', '/loginUser', 'Login#loginUser', 'loginUser'],
 
 		['GET', '/createrun', 'Run#createrun', 'createrun'],
-		['POST', '/createrunSubmit', 'Run#createrunSubmit', 'createrunSubmit'],
+		['POST', '/createrunSubmit', 'createrun#createrunSubmit', 'createrunSubmit'],
 		
 		['GET', '/seekrun', 'Run#seekrun', 'seekrun'],
 
