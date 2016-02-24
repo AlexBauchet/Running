@@ -10,6 +10,8 @@
 		['POST', '/loginUser', 'Login#loginUser', 'loginUser'],
 
 		['GET', '/createrun', 'Run#createrun', 'createrun'],
+		['POST', '/createrunSubmit', 'Run#createrunSubmit', 'createrunSubmit'],
+		
 		['GET', '/seekrun', 'Run#seekrun', 'seekrun'],
 
 		['GET', '/profile/view/[i:id]', 'Profile#view', 'viewProfile'],
