@@ -51,10 +51,10 @@
 					<input id="home_town" name="home_town" type="text" placeholder="Ville de résidence" value="<?php if(isset($profile['home_town'])) echo $profile['home_town'] ?>" class="form-control">
 				</div>
 
-				<div class="form-group form-group-updateProfile">
+				<!-- <div class="form-group form-group-updateProfile">
 					<label class="inputCreateRun" for="home_country">Pays de résidence</label>
 					<input id="home_country" name="home_country" type="text" placeholder="Pays de résidence" value="<?php if(isset($profile['home_country'])) echo $profile['home_country'] ?>" class="form-control">
-				</div>
+				</div> -->
 
 				<div class="form-group form-group-updateProfile">
 					<label class="inputCreateRun" for="description">Description</label>
@@ -67,9 +67,9 @@
 					<h3>Pendant la course, je parle : </h3>
 					<label class="inputCreateRun" hidden></label>
 					<div>
-						<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="0"> pas du tout</li>
-						<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="1"> un peu</li>
-						<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="2"> beaucoup</li>
+						<li class="btnRadioBlablarun"><input name="blablarun" id="blablarun" type="radio" value="0"> pas du tout</li>
+						<li class="btnRadioBlablarun"><input name="blablarun" id="blablarun" type="radio" value="1"> un peu</li>
+						<li class="btnRadioBlablarun"><input name="blablarun" id="blablarun" type="radio" value="2"> beaucoup</li>
 					</div>
 				</div>
 

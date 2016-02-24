@@ -26,6 +26,10 @@ class UpdateProfileController extends Controller
 		$this->show('profile/updateProfile', ['profile' => $profile]);
 	}
 
+	public function emailExists($email) {
+		debug($email);
+	}
+
 
 	public function updateProfileSubmit()
 	{
@@ -39,6 +43,11 @@ class UpdateProfileController extends Controller
 		$description = trim(htmlentities($_POST['description']));
 
 		/* TODO : ajouter les autres variables */
+		// $blablarun = $_POST['blablarun'];
+		// $language = $_POST['language'];
+		// $rate = $_POST['rate'];
+		// $updated_at = $_POST['updated_at'];
+
 
 		// Initialisation d'un tableau d'erreurs (associatif)
 		$errors = [];
@@ -49,13 +58,20 @@ class UpdateProfileController extends Controller
 		// Instanciation d'un object de type UserManager
 		$profileManager = new ProfileManager();
 
-		$resultUser = $profileManager->update(['profile_picture' => $profile_picture, 
+		$resultUser = $profileManager->update([
+			'profile_picture' => $profile_picture, 
 			'firstname' => $firstname,
 			'lastname' => $lastname,
 			// 'email' => $email,
 			'home_town' => $home_town,
 			// 'home_country' => $home_country,
-			'description' => $description], $userId['id']); 
+			'description' => $description,
+			// 'blablarun' => $blablarun,
+			// 'language' => $language,
+			// 'rate' => $rate,
+			// 'updated_at' => $updated_at
+			],
+			 $userId['id']); 
 
 		if($resultUser) {
 			$success['message'] = "Vos modifications ont bien été enregistrées.";
