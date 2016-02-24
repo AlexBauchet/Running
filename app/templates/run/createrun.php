@@ -12,7 +12,7 @@
 	<!-- Menu créer une course -->
 	<div class="container">
 
-		<form class="form-horizontal">
+		<form class="form-horizontal" method="POST" action="<?= $this->url('createrunSubmit'); ?>">
 
 			<div class="row">
 
