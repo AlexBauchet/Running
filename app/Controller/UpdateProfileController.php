@@ -33,9 +33,9 @@ class UpdateProfileController extends Controller
 		$profile_picture = $_POST['profilePicture'];
 		$firstname = trim(htmlentities($_POST['firstname']));
 		$lastname = trim(htmlentities($_POST['lastname']));
-		$email = trim(htmlentities($_POST['email']));
-		$homeTown = trim(htmlentities($_POST['homeTown']));
-		$homeCountry = trim(htmlentities($_POST['homeCountry']));
+		// $email = trim(htmlentities($_POST['email']));
+		$home_town = trim(htmlentities($_POST['home_town']));
+		// $home_country = trim(htmlentities($_POST['home_country']));
 		$description = trim(htmlentities($_POST['description']));
 
 		// Initialisation d'un tableau d'erreurs (associatif)
@@ -50,16 +50,16 @@ class UpdateProfileController extends Controller
 		$resultUser = $profileManager->update(['profile_picture' => $profile_picture, 
 			'firstname' => $firstname,
 			'lastname' => $lastname,
-			'email' => $email,
-			'homeTown' => $homeTown,
-			'homeCountry' => $homeCountry,
+			// 'email' => $email,
+			'home_town' => $home_town,
+			// 'home_country' => $home_country,
 			'description' => $description], $userId['id']); 
 
 		if($resultUser) {
 			$success['message'] = "Vos modifications ont bien été enregistrées.";
 		}
 		else {
-			$errors['message'] = "Cette adresse e-mail n'existe pas";
+			$errors['message'] = "Une erreur est survenue, merci de réessayer.";
 		}
 
 		$this->show('profile/updateProfile', ['success' => $success, 'errors' => $errors]);

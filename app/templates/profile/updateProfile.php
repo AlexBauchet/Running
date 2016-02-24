@@ -2,72 +2,66 @@
 
 <?php $this->start('main_content') ?>
 
-	<!-- MAIN CONTENT -->
-	<div class="container">
-		<h1 class="text-center">Modifier mon profil</h1>
-	</div>
+<!-- MAIN CONTENT -->
+<div class="container">
+	<h1 class="text-center">Modifier mon profil</h1>
+</div>
 
-	<!-- Afficher le profil de l utilisateur -->
-	<div class="container">
-		
-		<form method="POST" action="<?= $this->url('updateProfileSubmit'); ?>">
+<!-- Afficher le profil de l utilisateur -->
+<div class="container">
 
-			<div class="row">
+	<form method="POST" action="<?= $this->url('updateProfileSubmit'); ?>">
 
-				<div class="col-md-1">
-
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-5">
+				<div class="form-group form-group-updateProfile">
+					<label class="inputCreateRun" for="profilePicture">Charger une nouvelle photo de profil</label>
+					<input id="profilePicture" name="profilePicture" type="text" placeholder="Importer une photo" class="form-control">
 				</div>
 
-				<div class="col-md-5">
-
-					<div class="form-group form-group-updateProfile">
-						<label class="inputCreateRun" for="profilePicture">Charger une nouvelle photo de profil</label>
-						<input id="profilePicture" name="profilePicture" type="text" placeholder="Importer une photo" class="form-control">
-					</div>
-
-					<div class="form-group form-group-updateProfile">
-						<label class="inputCreateRun" for="firstname">Prénom</label>
-						<input id="firstname" name="firstname" type="text" placeholder="Prenom" value="<?php if(isset($profile['firstname'])) echo $profile['firstname'] ?>" class="form-control">
-					</div>
-
-					<div class="form-group form-group-updateProfile">
-						<label class="inputCreateRun" for="lastname">Nom</label>
-						<input id="lastname" name="lastname" type="text" placeholder="Nom" value="<?php if(isset($profile['lastname'])) echo $profile['lastname'] ?>" class="form-control">
-					</div>
-
-					<div class="form-group form-group-updateProfile">
-						<label class="inputCreateRun" for="homeTown">Ville de résidence</label>
-						<input id="homeTown" name="homeTown" type="text" placeholder="Ville de résidence" value="<?php if(isset($profile['home_town'])) echo $profile['home_town'] ?>" class="form-control">
-					</div>
-
-					<div class="form-group form-group-updateProfile">
-						<label class="inputCreateRun" for="homeCountry">Pays de résidence</label>
-						<input id="homeCountry" name="homeCountry" type="text" placeholder="Pays de résidence" value="<?php if(isset($profile['home_country'])) echo $profile['home_country'] ?>" class="form-control">
-					</div>
-
-					<div class="form-group form-group-updateProfile">
-						<label class="inputCreateRun" for="description">Description</label>
-						<textarea id="description" name="description" type="text" placeholder="Description" class="form-control"><?php if(isset($profile['description'])) echo $profile['description'] ?></textarea>
-					</div>
-
+				<div class="form-group form-group-updateProfile">
+					<label class="inputCreateRun" for="firstname">Prénom</label>
+					<input id="firstname" name="firstname" type="text" placeholder="Prenom" value="<?php if(isset($profile['firstname'])) echo $profile['firstname'] ?>" class="form-control">
 				</div>
 
-				<div class="col-md-5">
+				<div class="form-group form-group-updateProfile">
+					<label class="inputCreateRun" for="lastname">Nom</label>
+					<input id="lastname" name="lastname" type="text" placeholder="Nom" value="<?php if(isset($profile['lastname'])) echo $profile['lastname'] ?>" class="form-control">
+				</div>
 
-					<div class="form-group">
-						<h3>Pendant la course, je parle : </h3>
-						<label class="inputCreateRun" hidden></label>
-						<div>
-							<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="0"> pas du tout</li>
-							<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="1"> un peu</li>
-							<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="2"> beaucoup</li>
-						</div>
+				<div class="form-group form-group-updateProfile">
+					<label class="inputCreateRun" for="home_town">Ville de résidence</label>
+					<input id="home_town" name="home_town" type="text" placeholder="Ville de résidence" value="<?php if(isset($profile['home_town'])) echo $profile['home_town'] ?>" class="form-control">
+				</div>
+
+				<div class="form-group form-group-updateProfile">
+					<label class="inputCreateRun" for="home_country">Pays de résidence</label>
+					<input id="home_country" name="home_country" type="text" placeholder="Pays de résidence" value="<?php if(isset($profile['home_country'])) echo $profile['home_country'] ?>" class="form-control">
+				</div>
+
+				<div class="form-group form-group-updateProfile">
+					<label class="inputCreateRun" for="description">Description</label>
+					<textarea id="description" name="description" type="text" placeholder="Description" class="form-control"><?php if(isset($profile['description'])) echo $profile['description'] ?></textarea>
+				</div>
+			</div>
+
+			<div class="col-md-5">
+				<div class="form-group">
+					<h3>Pendant la course, je parle : </h3>
+					<label class="inputCreateRun" hidden></label>
+					<div>
+						<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="0"> pas du tout</li>
+						<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="1"> un peu</li>
+						<li class="btnRadioBlablarun"><input name="blablarun" type="radio" value="2"> beaucoup</li>
 					</div>
+				</div>
 
-					<div class="form-group">
-						<h3>Langues parlées : </h3>
-						<label class="inputCreateRun" hidden</label>
-						<div id="drapeaux">
+				<div class="form-group">
+					<h3>Langues parlées : </h3>
+					<label class="inputCreateRun" hidden> </label>
+
+					<div id="drapeaux">
 							<li class="checkboxLanguages">
 								<input class="languages" name="langues" type="checkbox" value="fr" class="form-control">
 								<img src="../assets/img/france.png" alt="drapeau francais">
@@ -79,7 +73,7 @@
 							<li class="checkboxLanguages">
 								<input class="languages" name="langues" type="checkbox" value="it" class="form-control">
 								<img src="../assets/img/italie.png" alt="drapeau italien">
-							</li>
+							</li>									
 							<li class="checkboxLanguages">
 								<input class="languages" name="langues" type="checkbox" value="es" class="form-control">
 								<img src="../assets/img/espagne.png" alt="drapeau espagnol">
@@ -92,8 +86,8 @@
 								<input class="languages" name="langues" type="checkbox" value="de" class="form-control">
 								<img src="../assets/img/portugal.png" alt="drapeau portugais">
 							</li>
-						</div>
 					</div>
+				</div>
 
 					<div class="form-group">
 						<h3>Mes exploits : </h3>
@@ -159,31 +153,30 @@
 
 					</div>
 
-				</div>
+			</div>
 
 				<div class="col-md-1">
-				
+
 				</div>
 
-			</div>
+		</div>
 
-			<div class="row">
+		<div class="row">
 
-				<div class="col-md-1"></div>
+			<div class="col-md-1"></div>
 
-				<div class="col-md-10">
-					<div class="form-group text-center">
-						<a type="submit" class="btn btn-danger btnUpdateProfile">Enregistrer les modifications</a>
-					</div>
+			<div class="col-md-10">
+				<div class="form-group text-center">
+					<button type="submit" class="btn btn-danger btnUpdateProfile">Enregistrer les modifications</a>
 				</div>
-
-				<div class="col-md-1"></div>
-
 			</div>
 
-		</form>
-		
-	</div>
-       	
+			<div class="col-md-1"></div>
+
+		</div>
+
+	</form>
+
+</div>
 
 <?php $this->stop('main_content') ?>
