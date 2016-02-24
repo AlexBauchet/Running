@@ -49,8 +49,7 @@
 					<a href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
 				<?php endif; ?>
 
-				<h3><?= $profile['home_town'] ?>
-				<?= $profile['home_country'] ?> 
+				<h3><?= $profile['home_town'] ?>, <?= $profile['home_country'] ?> 
 				- Membre depuis <?= date('F Y', strtotime($profile['created_at'])) ?></h3>
 				
 				<p><?= $profile['description'] ?></p>
