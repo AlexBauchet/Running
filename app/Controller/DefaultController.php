@@ -11,8 +11,15 @@ class DefaultController extends Controller
 	 * Page d'accueil par défaut
 	 */
 	public function home()
-	{
-		$this->show('default/home');
+	{	
+		$user = $this->getUser();
+		if (isset( $user )) {
+			$this->redirectToRoute('seekrun');
+		}
+		else {
+		 	$this->show('default/home');
+		}		
+		
 	}
 
 	public function privateHome() {
