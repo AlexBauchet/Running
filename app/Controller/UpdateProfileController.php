@@ -11,7 +11,9 @@ class UpdateProfileController extends Controller
 {	
 
 	public function updateProfile() {
-
+		// securise la page
+		$this->allowTo('member');
+		
 		$loggedUser = $this->getUser();
 		// debug($loggedUser);
 
