@@ -87,15 +87,15 @@
 						<label class="inputCreateRun" for="distance">Distance (du plus court au plus long)</label>
 						<div class="levelBar">
 							<input class="rng form-control" id="distance" name="distance" type="range" value="2" min="0" max="4" step="1">
-							<output class="val" id="outputLevel" for="distance" name="actualLevel"></output>/4
+							<output class="val" id="outputLevelDistance" for="distance" name="actualLevel"></output>/4
 						</div>
 					</div>
 
-					<div class="form-group form-group-createrun" id="rngs">		
+					<div class="form-group form-group-createrun" id="rgns">		
 						<label class="inputCreateRun" for="speed">Vitesse (du plus lent au plus rapide)</label>
 						<div class="levelBar">
 							<input class="rng form-control" id="speed" name="speed" type="range" value="2" min="0" max="4" step="1">
-							<output class="val" id="outputLevel" for="speed" name="actualLevel"></output>/4
+							<output class="val" id="outputLevelSpeed" for="speed" name="actualLevel"></output>/4
 						</div>
 					</div>
 

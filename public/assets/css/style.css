@@ -4,8 +4,8 @@
    ========================================================================== */
 
 @font-face {
-	font-family: 'Mona-Shark';
-	src: url('../fonts/Mona-Shark.otf');
+	font-family: 'FunSized';
+	src: url('../fonts/FunSized.ttf');
 }
 
 @keyframes slidy {
@@ -43,6 +43,7 @@ body { margin: 0; }
 h1 {
 	margin-top: 40px;
 	font-size: 30px;
+	font-family: "FunSized";
 }
 
 h2 {
@@ -181,7 +182,9 @@ footer {
 	margin-right: 5px;
 }
 
-
+#titre {
+	box-shadow: 10px, 10px, 5px #000;
+}
 
 /* ==========================================================================
    CREATERUN PAGE
