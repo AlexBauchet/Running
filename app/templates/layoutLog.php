@@ -50,6 +50,7 @@
 							<li><a href="<?= $this->url('seekrun') ?>">Trouver une course</a></li>
 							<li><a href="<?= $this->url('createrun') ?>">Proposer une course</a></li>
 							<li role="separator" class="divider"></li>
+							
 							<li><a href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a></li>
 							<li><a href="<?= $this->url('logout') ?>">Se déconnecter</a></li>
 							<li role="separator" class="divider"></li>

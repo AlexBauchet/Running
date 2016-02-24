@@ -30,13 +30,15 @@ class UpdateProfileController extends Controller
 	public function updateProfileSubmit()
 	{
 		// Affecter une variable à chaque valeur clé de $_POST
-		$profile_picture = $_POST['profilePicture'];
+		$profile_picture = $_POST['profile_picture'];
 		$firstname = trim(htmlentities($_POST['firstname']));
 		$lastname = trim(htmlentities($_POST['lastname']));
 		// $email = trim(htmlentities($_POST['email']));
 		$home_town = trim(htmlentities($_POST['home_town']));
 		// $home_country = trim(htmlentities($_POST['home_country']));
 		$description = trim(htmlentities($_POST['description']));
+
+		/* TODO : ajouter les autres variables */
 
 		// Initialisation d'un tableau d'erreurs (associatif)
 		$errors = [];

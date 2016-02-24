@@ -16,8 +16,13 @@
 			<div class="col-md-1"></div>
 			<div class="col-md-5">
 				<div class="form-group form-group-updateProfile">
-					<label class="inputCreateRun" for="profilePicture">Charger une nouvelle photo de profil</label>
-					<input id="profilePicture" name="profilePicture" type="text" placeholder="Importer une photo" class="form-control">
+					<label class="inputCreateRun" for="profile_picture">Charger une nouvelle photo de profil</label>
+					<input id="profile_picture" name="profile_picture" type="text" placeholder="Importer une photo" class="form-control">
+				</div>				
+
+				<div class="form-group form-group-updateProfile">
+					<label class="inputCreateRun" for="lastname">Nom</label>
+					<input id="lastname" name="lastname" type="text" placeholder="Nom" value="<?php if(isset($profile['lastname'])) echo $profile['lastname'] ?>" class="form-control">
 				</div>
 
 				<div class="form-group form-group-updateProfile">
@@ -26,8 +31,19 @@
 				</div>
 
 				<div class="form-group form-group-updateProfile">
-					<label class="inputCreateRun" for="lastname">Nom</label>
-					<input id="lastname" name="lastname" type="text" placeholder="Nom" value="<?php if(isset($profile['lastname'])) echo $profile['lastname'] ?>" class="form-control">
+					<!-- <label class="inputCreateRun" for="gender">Sexe</label> -->
+					<!-- <input id="gender" name="gender" type="text" placeholder="Sexe" value="<?php if(isset($profile['gender'])) echo $profile['gender'] ?>" class="form-control"> -->
+					<div>
+					</div>
+					
+					<div class="form-group form-group-updateProfile">
+							<p>Sexe:</p>
+							<select class="selectGender" name="gender" size="1">
+								<option value="0">Homme</option>
+								<option value="1">Femme</option>								
+							</select>
+						</div>	
+						
 				</div>
 
 				<div class="form-group form-group-updateProfile">
