@@ -162,7 +162,15 @@
 								<option value="7">entre 5h00 et 5h20</option>
 								<option value="8">+5h20</option>
 							</select>
-						</div>	
+						</div>
+
+						<div class="form-group form-group-runProfile TODO">
+							<p><strong>TODO :</strong>
+								</br>- photo de profil s efface si on met a jour le profil sans charger une nouvelle photo
+								</br>- recuperer les champs blablarun, langues et exploits
+								</br>- enregistrer toutes les langues selectionnees en bdd (seulement un choix est sauvegardé pour le moment)
+							</p>
+						</div>
 
 					</div>
 

@@ -68,7 +68,7 @@ class ProfileController extends Controller
 					$profile['time_10km'] = 'entre 40 et 50min';
 					break;
 				case 4 : 
-					$profile['time_10km'] = 'entre 50min et 1 h';
+					$profile['time_10km'] = 'entre 50min et 1h';
 					break;
 				case 5 : 
 					$profile['time_10km'] = 'entre minuit et 1h';
