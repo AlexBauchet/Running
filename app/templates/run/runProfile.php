@@ -5,7 +5,7 @@
 	<!-- MAIN CONTENT -->
 	<div class="container text-center">
 		<h1 class="text-center"><?= $run['run_name'] ?></h1>
-		<h3>Organisée par <?= $run['user_id'] ?></h3>
+		<h3>Organisée par <a href="<?= $this->url('createrun') ?>"><?= $run['user_id'] ?></a></h3>
 	</div>
 
 	<br/>
@@ -35,7 +35,7 @@
 
 				<div class="form-group form-group-runProfile">
 					<i class="fa fa-calendar fa-1x i-RunProfile"></i>
-					<p><?= $run['departure_date'] ?></p>
+					<p><?= date('d F Y', strtotime($run['departure_date'])) ?></p>
 				</div>
 
 				<div class="form-group form-group-runProfile">
