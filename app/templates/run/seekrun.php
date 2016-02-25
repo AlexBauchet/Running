@@ -73,6 +73,13 @@
 		</div>
 	</div>
 
+	<div class="form-group form-group-runProfile TODO">
+		<p><strong>TODO :</strong>
+			</br>- Positionner tous les markers correspondants sur la carte
+			</br>- Faire fonctionner le bouton Chercher les courses correspondantes
+		</p>
+	</div>
+
 
 	<!-- Affichage de la Map et ajouter une course -->
 	<div class="container">
