@@ -96,7 +96,7 @@
 								<img src="../assets/img/allemagne.png" alt="drapeau allemand">
 							</li>
 							<li class="checkboxLanguages">
-								<input class="languages" name="langues" type="checkbox" value="de" class="form-control">
+								<input class="languages" name="langues" type="checkbox" value="pt" class="form-control">
 								<img src="../assets/img/portugal.png" alt="drapeau portugais">
 							</li>
 					</div>

@@ -38,12 +38,12 @@ class UpdateProfileController extends Controller
 		$profile_picture = trim(htmlentities($_POST['profile_picture']));
 		$firstname = trim(htmlentities($_POST['firstname']));
 		$lastname = trim(htmlentities($_POST['lastname']));
-		// $gender = trim(htmlentities($_POST['gender']));
+		$gender = trim(htmlentities($_POST['gender']));
 		$home_town = trim(htmlentities($_POST['home_town']));
 		$home_country = trim(htmlentities($_POST['home_country']));
 		$description = trim(htmlentities($_POST['description']));
-		// $blablarun = $_POST['blablarun'];
-		// $language = $_POST['language'];
+		$blablarun = $_POST['blablarun'];
+		$language = $_POST['langues'];
 		$time_10km = trim(htmlentities($_POST['time_10km']));
 		$time_20km = trim(htmlentities($_POST['time_20km']));
 		$time_half = trim(htmlentities($_POST['time_half']));
@@ -65,17 +65,18 @@ class UpdateProfileController extends Controller
 		// objet datetime
 		$date = new DateTime();
 
+		// si le profil existe, on le met a jour
 		if($profile) {
 			$resultProfile = $profileManager->update([
 				'profile_picture' => $profile_picture, 
 				'firstname' => $firstname,
 				'lastname' => $lastname,
-				// 'gender' => $gender,
+				'gender' => $gender,
 				'home_town' => $home_town,
 				'home_country' => $home_country,
 				'description' => $description,
-				// 'blablarun' => $blablarun,
-				// 'language' => $language,
+				'blablarun' => $blablarun,
+				'language' => $language,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
 				'time_half' => $time_half,
@@ -84,17 +85,18 @@ class UpdateProfileController extends Controller
 				'user_id' => $userId['id'],
 				], $profile['id']); 
 		}
+		// si le profil n existe pas, on le crée (quand le user complete son profil pour la premiere fois)
 		else {
 			$resultProfile = $profileManager->insert([
 				'profile_picture' => $profile_picture, 
 				'firstname' => $firstname,
 				'lastname' => $lastname,
-				// 'gender' => $gender,
+				'gender' => $gender,
 				'home_town' => $home_town,
 				'home_country' => $home_country,
 				'description' => $description,
-				// 'blablarun' => $blablarun,
-				// 'language' => $language,
+				'blablarun' => $blablarun,
+				'language' => $language,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
 				'time_half' => $time_half,
