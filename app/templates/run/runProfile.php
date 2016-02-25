@@ -58,6 +58,19 @@
 					<p><?= $run['description'] ?></p>
 				</div>
 
+				<div class="form-group form-group-runProfile">
+					<button type="submit" class="btn btn-danger">Participer à la course</button>
+				</div>
+
+				<div class="form-group form-group-runProfile TODO">
+					<p><strong>TODO :</strong>
+						</br>- Creer un espace de messagerie pour que les runners puivent se contacter en cas de besoin
+						</br>- Positionner le marker sur la map
+						</br>- Faire fonctionner bouton Participer a la course
+						</br>- Lien vers profil de l'organisateur en dessous du titre de la course
+					</p>
+				</div>
+
 			</div>
 
 

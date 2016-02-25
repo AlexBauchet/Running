@@ -56,6 +56,12 @@
 						<a type="submit" class="btn btn-danger">Envoyer votre demande</a>
 					</div>
 
+					<div class="form-group form-group-runProfile TODO">
+						<p><strong>TODO :</strong>
+							</br>- Faire fonctionner bouton Envoyer votre demande
+						</p>
+					</div>
+
 				</form>
 
 			</div>
