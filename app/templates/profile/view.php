@@ -62,10 +62,10 @@
 				<?php endforeach; ?></p>
 
 				<h3>Mes exploits :</h3>
-				<p>10 km : 'TIME_10KM'</p>
-				<p>20 km : 'TIME_20KM'</p>
-				<p>Semi-marathon : 'TIME_HALF'</p>
-				<p>Marathon : 'TIME_MARATHON'</p>
+				<p>10 km : <?= $profile['time_10km'] ?></p>
+				<p>20 km : <?= $profile['time_20km'] ?></p>
+				<p>Semi-marathon : <?= $profile['time_half'] ?></p>
+				<p>Marathon : <?= $profile['time_marathon'] ?></p>
 
 			</div>
 
