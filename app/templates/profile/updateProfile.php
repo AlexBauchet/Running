@@ -10,7 +10,7 @@
 <!-- Afficher le profil de l utilisateur -->
 <div class="container">
 
-	<form method="POST" action="<?= $this->url('updateProfileSubmit'); ?>">
+	<form method="POST" enctype="multipart/form-data" action="<?= $this->url('updateProfileSubmit'); ?>">
 
 		<div class="row">
 
@@ -19,7 +19,7 @@
 			<div class="col-md-5">
 				<div class="form-group form-group-updateProfile">
 					<label class="inputCreateRun" for="profile_picture">Charger une nouvelle photo de profil</label>
-					<input id="profile_picture" name="profile_picture" type="text" placeholder="Importer une photo" class="form-control">
+					<input id="profile_picture" name="profile_picture" type="file" placeholder="Importer une photo" class="form-control">
 				</div>				
 
 				<div class="form-group form-group-updateProfile">

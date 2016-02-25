@@ -34,8 +34,7 @@ class UpdateProfileController extends Controller
 
 	public function updateProfileSubmit()
 	{
-		// Affecter une variable à chaque valeur clé de $_POST
-		$profile_picture = trim(htmlentities($_POST['profile_picture']));
+		// Affecter une variable à chaque valeur clé de $_POST (sauf profile_picture)
 		$firstname = trim(htmlentities($_POST['firstname']));
 		$lastname = trim(htmlentities($_POST['lastname']));
 		$gender = trim(htmlentities($_POST['gender']));
@@ -56,11 +55,45 @@ class UpdateProfileController extends Controller
 		$userId = $this->getUser();
 
 		//debug($userId);
+	
 
 		// Instanciation d'un object de type UserManager
 		$profileManager = new ProfileManager();
 
 		$profile = $profileManager->findByUserId($userId['id']);
+		$profile_picture = $profile['profile_picture'];
+
+
+		if(isset($_FILES)) {
+				$uploadFileName = $_FILES['profile_picture']['name'];
+				$uploadFileType = $_FILES['profile_picture']['type'];
+				$uploadFileSize = $_FILES['profile_picture']['size'];
+
+				if(!strstr($uploadFileType, 'jpg')&& !strstr($uploadFileType, 'jpeg') && !strstr($uploadFileType, 'gif')) {
+					$errors['profile_picture']= "ERREUR - Le fichier n'est pas une image au format web";
+
+				}
+
+				// 6. Checker que le poids max est < 10000000
+
+				elseif ($uploadFileSize > 10000000) {
+					$errors['profile_picture']= "ERREUR - Le fichier dépasse le poids max";
+				}
+
+				 
+				// 3. Déplacer l'image upload
+				elseif (move_uploaded_file($_FILES['profile_picture']['tmp_name'], __DIR__.'/../../uploads/'.$_FILES['profile_picture']['name'])) {
+					 $errors['profile_picture']= "Votre image a bien été chargé !";
+
+					 $profile_picture = $_FILES['profile_picture']['name'];
+				}
+
+			  else {
+			  		$errors['profile_picture']= "ERREUR - Votre image n'a pas été uploadé correctement";
+			  }
+
+		}
+
 
 		// objet datetime
 		$date = new DateTime();
@@ -104,8 +137,55 @@ class UpdateProfileController extends Controller
 				'created_at' => $date->format('Y-m-d H:i:s'),
 				'updated_at' => $date->format('Y-m-d H:i:s'),
 				'user_id' => $userId['id'],
-				]); 			
+				]); 
+
+	}
+		// Check ma soumission du formulaire
+	if(isset($_POST['action'])) {
+		echo "<pre>";
+		print_r($_POST);
+		echo "</pre>";
+
+		echo "<pre>";
+		print_r($_FILES);
+		echo "</pre>";
+
+		// 1. Faire un echo de la taille du fichier envoyer
+		echo "Le poids du fichier est :".$_FILES['profile_picture']['size'];
+
+		// 2. Affichier le type de l'image
+		echo "Le type d'image est :".$_FILES['profile_picture']['type'];
+
+		// 4. Checker le type de fichier d'image
+		// 5.
+		$uploadFileName = $_FILES['profile_picture']['name'];
+		$uploadFileType = $_FILES['profile_picture']['type'];
+		$uploadFileSize = $_FILES['profile_picture']['size'];
+		if(!strstr($uploadFileType, 'jpg')&& !strstr($uploadFileType, 'jpeg') && !strstr($uploadFileType, 'gif')) {
+			echo "ERREUR - Le fichier n'est pas une image au format web";
+
 		}
+
+		// 6. Checker que le poids max est < 10000000
+
+		elseif ($uploadFileSize > 10000000) {
+			echo "ERREUR - Le fichier dépasse le poids max";
+		}
+
+		 
+		// 3. Déplacer l'image upload
+		elseif (move_uploaded_file($_FILES['profile_picture']['tmp_name'], './img/'.$_FILES['profile_picture']['name'])) {
+			 echo "Votre image a bien été chargé !";
+
+		}
+
+	  else {
+	  		echo "ERREUR - Votre image n'a pas été uploadé correctement";
+	  }
+
+	}
+
+
 
 		if($resultProfile) {
 			$_SESSION['message'] = "Vos modifications ont bien été enregistrées.";

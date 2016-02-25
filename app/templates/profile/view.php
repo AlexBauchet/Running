@@ -18,7 +18,7 @@
 			<div class="col-md-4">
 			
 				<div class="photo-profil">
-					<img src="<?= $profile['profile_picture'] ?>" alt="Photo de profil" width="300" height="200">
+					<img src="/uploads/<?= $profile['profile_picture'] ?>" alt="Photo de profil" width="300" height="200">
 				</div>
 
 				<div class="nbRuns">
