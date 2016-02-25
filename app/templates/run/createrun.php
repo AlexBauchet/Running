@@ -98,6 +98,13 @@
 						<?php endif; ?>
 					</div>
 
+					<div class="form-group form-group-runProfile TODO">
+						<p><strong>TODO :</strong>
+							</br>- Positionner point de depart sur la Map
+						</p>
+					</div>
+
+
 				</div>
 
 				<div class="col-md-4">
