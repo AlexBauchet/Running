@@ -22,7 +22,7 @@
 						</div>
 
 						<div class="button">
-							<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google fa-2x"></i>Connexion avec Google+</button>
+							<button type="button" class="btn btn-google" data-dismiss="modal"><i id="iGoogle" class="fa fa-google-plus-square fa-2x"></i>Connexion avec Google+</button>
 						</div>
 
 						<div class="text-center ouEmail">
