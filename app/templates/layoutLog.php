@@ -140,10 +140,14 @@
 		<!-- SCRIPTS -->
 
 		<script src="<?= $this->assetUrl('js/vendor/jquery-1.11.2.min.js') ?>"></script>
-
 		<script src="<?= $this->assetUrl('js/vendor/bootstrap.min.js') ?>"></script>
 		<script src="<?= $this->assetUrl('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js') ?>"></script>
+
+		<!-- Chargement de l'API de Google -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7fVAvmE9RrJN6uombxucDLZTL3ogyqE0&callback=initMap"></script>
+		
 		<script src="<?= $this->assetUrl('js/main.js') ?>"></script>
+
 
 
 	</footer>

@@ -22,7 +22,11 @@ class RunController extends Controller
 	{	
 		// securise la page
 		$this->allowTo('member');
-		$this->show('run/seekrun');
+
+		$runningManager = new RunningManager;
+		$allRuns = $runningManager->findAll();
+
+		$this->show('run/seekrun', ['allRuns' => $allRuns]);
 	}
 
 	/* Page runProfile */
@@ -32,7 +36,9 @@ class RunController extends Controller
 		$this->allowTo('member');
 		
 		$runningManager = new RunningManager();
-		$run = $runningManager->find($id);
+		$run = $runningManager->findWithUser($id);
+
+		debug($run);
 
 		if ($run) {
 

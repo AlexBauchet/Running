@@ -5,7 +5,7 @@
 	<!-- MAIN CONTENT -->
 	<div class="container text-center">
 		<h1 class="text-center"><?= $run['run_name'] ?></h1>
-		<h3>Organisée par <a href="<?= $this->url('createrun') ?>"><?= $run['user_id'] ?></a></h3>
+		<h3>Organisée par <a href="<?= $this->url('viewProfile', ['id' => $run['profile_id']]) ?>"><?= $run['firstname'] ?></a></h3>
 	</div>
 
 	<br/>
