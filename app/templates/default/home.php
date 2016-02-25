@@ -2,15 +2,6 @@
 
 <?php $this->start('main_content') ?>
 
-
-	<?php if(isset($_SESSION['message'])): ?>
-		<div class="alert alert-danger">
-			<p><?= $_SESSION['message'] ?></p>
-			<?php unset($_SESSION['message']); ?>
-		</div>
-	<?php endif; ?>
-
-
 	<!-- Slider -->
 
 	<!-- <div id="slider">
@@ -22,7 +13,7 @@
 			<img src="<?= $this->assetUrl('img/running4.png') ?>"> -->
 
 			<div class="text-center">
-				<video autoplay poster="<?= $this->assetUrl('img/runningHP.jpg')?>" id="bgvid" loop controls width="1280" heigth="720">
+				<video autoplay poster="<?= $this->assetUrl('img/runningHP.jpg')?>" id="bgvid" loop muted width="1280" heigth="720">
 			   	 	<source src="<?= $this->assetUrl('img/runningHP.webm')?>" type="video/webm">
 			    	<source src="<?= $this->assetUrl('img/runningHP.mp4')?>" type="video/mp4">
 			   </video>

@@ -74,10 +74,12 @@
 
 	<section>
 
-		<!-- message de conf ou d'erreur apres creation d'un run -->
+		<!-- message de conf ou d'erreur en Session -->
 		<?php if(isset($_SESSION['message'])) : ?>
-			<?= $_SESSION['message']; ?>
-			<?php unset($_SESSION['message']); ?>
+			<div class="alert alert-danger msgSession">
+				<?= $_SESSION['message']; ?>
+				<?php unset($_SESSION['message']); ?>
+			</div>
 		<?php endif; ?>
 
 

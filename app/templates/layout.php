@@ -62,6 +62,15 @@
 
 	<section>
 
+		<!-- message de conf apres deconnexion -->
+		<?php if(isset($_SESSION['message'])): ?>
+			<div class="alert alert-danger msgSession">
+				<p><?= $_SESSION['message'] ?></p>
+				<?php unset($_SESSION['message']); ?>
+			</div>
+		<?php endif; ?>
+
+
 		<?= $this->section('main_content') ?>
 
 	</section>
