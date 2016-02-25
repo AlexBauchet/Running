@@ -136,7 +136,7 @@
 
 						<div class="distancesOfficielles">
 							<p>Semi-marathon : </p>
-							<select class="selectDistance" name="time_semi" size="1">
+							<select class="selectDistance" name="time_half" size="1">
 								<option value="0">Pas de temps</option>
 								<option value="1">-1h30</option>
 								<option value="2">entre 1h30 et 1h40</option>
