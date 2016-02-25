@@ -9,7 +9,7 @@
 
 	<!-- Afficher le profil de l utilisateur -->
 	<div class="container">
-		<div class="row">
+		<div class="row view">
 
 			<div class="col-md-1">
 			
@@ -46,7 +46,7 @@
 				<h2>Bonjour, je m'appelle <?= $profile['firstname'] ?> !</h2>
 				
 				<?php if ($w_user['id'] == $profile['user_id']) : ?>
-					<a href="<?= $this->url('updateProfile') ?>">Modifier mon profil</a>
+					<a href="<?= $this->url('updateProfile') ?>"><i class="fa fa-edit i-view"></i>Modifier mon profil</a>
 				<?php endif; ?>
 
 				<h3><?= $profile['home_town'] ?>, <?= $profile['home_country'] ?> 
@@ -62,10 +62,10 @@
 				<?php endforeach; ?></p>
 
 				<h3>Mes exploits :</h3>
-				<p>10 km : 'TEMPS_10KM'</p>
-				<p>20 km : 'TEMPS_20KM'</p>
-				<p>Semi : 'TEMPS_SEMI'</p>
-				<p>Marathon : 'TEMPS_MARATHON'</p>
+				<p>10 km : 'TIME_10KM'</p>
+				<p>20 km : 'TIME_20KM'</p>
+				<p>Semi-marathon : 'TIME_HALF'</p>
+				<p>Marathon : 'TIME_MARATHON'</p>
 
 			</div>
 

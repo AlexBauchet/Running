@@ -3,6 +3,7 @@
 namespace Controller;
 
 use \W\Controller\Controller;
+use \Manager\RunningManager;
 
 class RunController extends Controller
 {
@@ -22,6 +23,22 @@ class RunController extends Controller
 		// securise la page
 		$this->allowTo('member');
 		$this->show('run/seekrun');
+	}
+
+	/* Page runProfile */
+	public function runProfile($id)
+	{	
+		// securise la page
+		$this->allowTo('member');
+		$runningManager = new RunningManager();
+		$run = $runningManager->find($id);
+		if ($run) {
+			$this->show('run/runProfile', ['run' => $run]);
+		}
+		else {
+			// page erreur 404
+		}
+		
 	}
 
 

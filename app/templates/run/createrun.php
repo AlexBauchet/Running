@@ -125,7 +125,7 @@
 					</div>
 
 					<div class="form-group form-group-createrun">
-						<label class="inputCreateRun" for="runDescription">Description</label>
+						<label class="inputCreateRun" for="runDescription">Description du parcours</label>
 						<textarea id="runDescription" name="runDescription" type="text" placeholder="Description" class="form-control"></textarea>
 					</div>
 

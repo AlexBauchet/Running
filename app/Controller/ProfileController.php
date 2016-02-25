@@ -7,11 +7,11 @@ use \Manager\ProfileManager;
 
 class ProfileController extends Controller
 {
-	/* Page userPage */
-	public function userPage()
-	{		
-		$this->show('profile/userPage');
-	}
+	// /* Page View */
+	// public function userPage()
+	// {		
+	// 	$this->show('profile/userPage');
+	// }
 	
 	/* Page updateProfile */
 	public function updateProfile()
