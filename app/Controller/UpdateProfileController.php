@@ -42,7 +42,7 @@ class UpdateProfileController extends Controller
 		$home_town = trim(htmlentities($_POST['home_town']));
 		$home_country = trim(htmlentities($_POST['home_country']));
 		$description = trim(htmlentities($_POST['description']));
-		//$blablarun = $_POST['blablarun'];
+		$blablarun = $_POST['blablarun'];
 		//$language = $_POST['langues'];
 		$time_10km = trim(htmlentities($_POST['time_10km']));
 		$time_20km = trim(htmlentities($_POST['time_20km']));
@@ -75,7 +75,7 @@ class UpdateProfileController extends Controller
 				'home_town' => $home_town,
 				'home_country' => $home_country,
 				'description' => $description,
-				//'blablarun' => $blablarun,
+				'blablarun' => $blablarun,
 				//'language' => $language,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
@@ -95,7 +95,7 @@ class UpdateProfileController extends Controller
 				'home_town' => $home_town,
 				'home_country' => $home_country,
 				'description' => $description,
-				//'blablarun' => $blablarun,
+				'blablarun' => $blablarun,
 				//'language' => $language,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
@@ -113,8 +113,9 @@ class UpdateProfileController extends Controller
 		}
 		else {
 			$_SESSION['message'] = "Une erreur est intervenue. Vos mises à jour n'ont pas été enregistrées.";
-			$this->show('profile/updateProfile', ['errors' => $errors]);
+			// $this->show('profile/updateProfile', ['errors' => $errors]);
 		}
+		$this->redirectToRoute('viewProfile', ['id' => $resultProfile['id'],'success' => $success, 'errors' => $errors]);
 
 	}
 
