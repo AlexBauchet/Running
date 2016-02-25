@@ -56,7 +56,6 @@
 							<li role="separator" class="divider"></li>
 							<li><a href="<?= $this->url('cgu') ?>">CGU</a></li>
 							<li><a href="<?= $this->url('contacts') ?>">Contacts</a></li>
-
 						</ul>
 					</li>
 				</ul>

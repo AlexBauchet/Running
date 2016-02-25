@@ -67,6 +67,15 @@
 				<p>Semi-marathon : <?= $profile['time_half'] ?></p>
 				<p>Marathon : <?= $profile['time_marathon'] ?></p>
 
+			<div class="form-group form-group-runProfile TODO">
+				<p><strong>TODO :</strong>
+					</br>- recuperer toutes les langues selectionnees en bdd (seulement un choix est sauvegardé pour le moment)
+					</br>- recuperer le nb de run deja effectues par le membre
+					</br>- afficher les 3 prochains runs du membre
+					</br>- mettre en majuscules la 1ere lettre pour firstname, city et country
+				</p>
+			</div>
+
 			</div>
 
 			<div class="col-md-1">
