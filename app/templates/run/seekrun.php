@@ -77,6 +77,9 @@
 		<p><strong>TODO :</strong>
 			</br>- Centrer la carte par defaut sur la location du user
 			</br>- Faire fonctionner le bouton Chercher les courses correspondantes
+			</br>- InfoWindows : importer donnees via PHP
+			</br>- InfoWindows : supprimer h1 automatique
+			</br>- InfoWindows : bouton Participer au Run
 		</p>
 	</div>
 
@@ -84,7 +87,7 @@
 	<!-- Affichage de la Map et ajouter une course -->
 	<div class="container">
 		<div class="row mapsSeekRun">
-			<div class="col-md-12 mapsSekkRunMargin">
+			<div class="col-md-12 mapsSeekRunMargin">
 					
 				<!-- GEOLOCALISATION -->
 				<div id="mapSeekRun"></div>
@@ -108,12 +111,24 @@
 		var map;
 
 		function initMap() {
+
 			map = new google.maps.Map(document.getElementById('mapSeekRun'), {
 				center: {lat: 48.856614, lng: 2.352222},
 				zoom: 12
 			});
 
 			<?php foreach($allRuns as $run): ?>
+
+				var messageInfoWindow<?= $run['id'] ?> = "<h1 class='h1-infoWindow'><?= $run['run_name'] ?><h1>" + 
+										"<h3 class='h3-infoWindow'>organisé par firstname</h3>" +
+										'<p>speed</p>' +
+										'<p>distance</p>' +
+										'<p>autres participants</p>' +
+										'<button>Participer au run</button>';
+
+				var infoWindow = new google.maps.InfoWindow({
+					content: messageInfoWindow<?= $run['id'] ?>
+				});
 
 				var myLatLng<?= $run['id'] ?> = {lat: <?= $run['latitude'] ?>, lng: <?= $run['longitude'] ?>};
 
@@ -123,6 +138,11 @@
 					title: "<?= $run['run_name'] ?>"
 				});
 
+				marker<?= $run['id'] ?>.addListener('mouseover', function() {
+					// ouverture au click d une infobulle contenant les details du run
+					infoWindow.open(map, marker<?= $run['id'] ?>);
+				});
+
 				marker<?= $run['id'] ?>.addListener('click', function() {
 					// redirection en JS vers la page de detail de la course 
 					window.location.href="<?= $this->url('runProfile', ['id' => $run['id']]) ?>";
@@ -130,6 +150,16 @@
 
 			<?php endforeach; ?>
 		}
+
+		// function attachMessage(marker, messageInfoWindow) {
+		// 	var infowindow = new google.maps.InfoWindow({
+		// 		content: messageInfoWindow
+		// 	});
+
+		// 	marker.addListener('click', function() {
+		// 		infowindow.open(marker.get('map'), marker);
+		// 	});
+		// }
 
 	</script>
 

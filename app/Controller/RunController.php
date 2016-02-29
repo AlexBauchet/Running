@@ -25,6 +25,8 @@ class RunController extends Controller
 
 		$runningManager = new RunningManager;
 		$allRuns = $runningManager->findAll();
+		
+		// debug($allRuns);
 
 		$this->show('run/seekrun', ['allRuns' => $allRuns]);
 	}
