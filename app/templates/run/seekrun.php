@@ -76,10 +76,6 @@
 	<div class="form-group form-group-runProfile TODO">
 		<p><strong>TODO :</strong>
 			</br>- Centrer la carte par defaut sur la location du user
-			</br>- Faire fonctionner le bouton Chercher les courses correspondantes
-			</br>- InfoWindows : importer donnees via PHP
-			</br>- InfoWindows : supprimer h1 automatique
-			</br>- InfoWindows : bouton Participer au Run
 		</p>
 	</div>
 
