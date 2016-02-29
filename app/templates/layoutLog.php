@@ -38,7 +38,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="<?= $this->url('home') ?>" class="navbar-brand"><font size="7" face="FunSized" color="#3D41B2">Running</a></font>
+				<a href="<?= $this->url('home') ?>" class="navbar-brand"><font size="7" face="FunSized" color="#D0D0D0">Running</a></font>
 			</div>
 
 			<div id="navbar" class="navbar-collapse collapse">
