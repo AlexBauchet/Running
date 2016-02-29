@@ -136,6 +136,12 @@
 					infoWindow<?= $run['id'] ?>.open(map, marker<?= $run['id'] ?>);
 				});
 
+				marker<?= $run['id'] ?>.addListener('mouseout', function() {
+					// ouverture au click d une infobulle contenant les details du run
+					infoWindow<?= $run['id'] ?>.close(map, marker<?= $run['id'] ?>);
+				});
+
+
 				marker<?= $run['id'] ?>.addListener('click', function() {
 					// redirection en JS vers la page de detail de la course 
 					window.location.href="<?= $this->url('runProfile', ['id' => $run['id']]) ?>";
