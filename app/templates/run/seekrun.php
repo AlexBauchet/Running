@@ -119,14 +119,11 @@
 
 			<?php foreach($allRuns as $run): ?>
 
-				var messageInfoWindow<?= $run['id'] ?> = "<h1 class='h1-infoWindow'><?= $run['run_name'] ?><h1>" + 
-										"<h3 class='h3-infoWindow'>organisé par firstname</h3>" +
-										'<p>speed</p>' +
-										'<p>distance</p>' +
-										'<p>autres participants</p>' +
-										'<button>Participer au run</button>';
+				var messageInfoWindow<?= $run['id'] ?> = "<h2 id='h2-infoWindow'><a href='<?= $this->url('runProfile', ['id' => $run['id']]) ?>'><?= $run['run_name'] ?></a></h2>" + 
+														 "<p class='p-infoWindow'><i class='fa fa-arrows-h fa-1x i-infoWindow'></i><?= $run['distance'] ?> km</p>" +
+														 "<p class='p-infoWindow'><i class='fa fa-flash fa-1x i-infoWindow'></i><?= $run['speed'] ?> min/km</p>";
 
-				var infoWindow = new google.maps.InfoWindow({
+				var infoWindow<?= $run['id'] ?> = new google.maps.InfoWindow({
 					content: messageInfoWindow<?= $run['id'] ?>
 				});
 
@@ -140,7 +137,7 @@
 
 				marker<?= $run['id'] ?>.addListener('mouseover', function() {
 					// ouverture au click d une infobulle contenant les details du run
-					infoWindow.open(map, marker<?= $run['id'] ?>);
+					infoWindow<?= $run['id'] ?>.open(map, marker<?= $run['id'] ?>);
 				});
 
 				marker<?= $run['id'] ?>.addListener('click', function() {
