@@ -7,7 +7,7 @@
 	<h1 class="text-center">Modifier mon profil</h1>
 </div>
 
-<?php debug($profile['language']); ?>
+<?php debug($profile['profile_picture']); ?>
 
 <!-- Afficher le profil de l utilisateur -->
 <div class="container">
@@ -21,7 +21,8 @@
 			<div class="col-md-5">
 				<div class="form-group form-group-updateProfile">
 					<label class="inputCreateRun" for="profile_picture">Charger une nouvelle photo de profil</label>
-					<input id="profile_picture" name="profile_picture" type="file" placeholder="Importer une photo" class="form-control">
+					<input id="profile_picture" name="profile_picture" type="file" placeholder="Importer une photo" class="form-control" <?php if($profile['profile_picture']) {echo 'selected' ; } ?>>
+					<input id="profile_picture" name="profile_picture" type="text" placeholder="Importer une photo" class="form-control" <?php if($profile['profile_picture']) {echo 'selected' ; } ?>>
 				</div>				
 
 				<div class="form-group form-group-updateProfile">
@@ -78,31 +79,31 @@
 
 					<div id="drapeaux">
 							<li class="checkboxLanguages">
-								<input class="languages" name="language" type="checkbox" value="fr" class="form-control" <?php if($profile['language'] == 'fr') {echo 'checked' ; } ?> >
+								<input class="languages" name="language_fr" type="checkbox" value="Français" class="form-control" <?php if($profile['language_fr'] == 'Français') {echo 'checked' ; } ?> >
 								<img src="../assets/img/france.png" alt="drapeau francais">
 							</li>
 							<li class="checkboxLanguages">
-								<input class="languages" name="language" type="checkbox" value="en" class="form-control" <?php if($profile['language'] == 'en') {echo 'checked' ; } ?> >
+								<input class="languages" name="language_en" type="checkbox" value="English" class="form-control" <?php if($profile['language_en'] == 'English') {echo 'checked' ; } ?> >
 								<img src="../assets/img/uk.png" alt="drapeau anglais">
 							</li>
 							<li class="checkboxLanguages">
-								<input class="languages" name="language" type="checkbox" value="it" class="form-control" <?php if($profile['language'] == 'it') {echo 'checked' ; } ?> >
+								<input class="languages" name="language_es" type="checkbox" value="Español" class="form-control" <?php if($profile['language_es'] == 'Español') {echo 'checked' ; } ?> >
+								<img src="../assets/img/espagne.png" alt="drapeau espagnol">
+							</li>							
+							<li class="checkboxLanguages">
+								<input class="languages" name="language_it" type="checkbox" value="Italiano" class="form-control" <?php if($profile['language_it'] == 'Italiano') {echo 'checked' ; } ?> >
 								<img src="../assets/img/italie.png" alt="drapeau italien">
 							</li>									
 							<li class="checkboxLanguages">
-								<input class="languages" name="language" type="checkbox" value="es" class="form-control" <?php if($profile['language'] == 'es') {echo 'checked' ; } ?> >
-								<img src="../assets/img/espagne.png" alt="drapeau espagnol">
-							</li>
-							<li class="checkboxLanguages">
-								<input class="languages" name="language" type="checkbox" value="de" class="form-control" <?php if($profile['language'] == 'de') {echo 'checked' ; } ?> >
+								<input class="languages" name="language_de" type="checkbox" value="Deutsch" class="form-control" <?php if($profile['language_de'] == 'Deutsch') {echo 'checked' ; } ?> >
 								<img src="../assets/img/allemagne.png" alt="drapeau allemand">
 							</li>
 							<li class="checkboxLanguages">
-								<input class="languages" name="language" type="checkbox" value="pt" class="form-control" <?php if($profile['language'] == 'pt') {echo 'checked' ; } ?> >
+								<input class="languages" name="language_pt" type="checkbox" value="Português" class="form-control" <?php if($profile['language_pt'] == 'Português') {echo 'checked' ; } ?> >
 								<img src="../assets/img/portugal.png" alt="drapeau portugais">
-							</li>
+							</li>							
 					</div>
-				</div>
+			</div>
 
 					<div class="form-group">
 						<h3>Mes exploits : </h3>
@@ -154,21 +155,20 @@
 							<p>Marathon : </p>
 							<select class="selectDistance" name="time_marathon" size="1">
 								<option value="0" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >Pas de temps</option>
-								<option value="1" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >-3h00</option>
-								<option value="2" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >entre 3h00 et 3h20</option>
-								<option value="3" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >entre 3h20 et 3h40</option>
-								<option value="4" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >entre 3h40 et 4h00</option>
-								<option value="5" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >entre 4h20 et 4h40</option>
-								<option value="6" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >entre 4h40 et 5h00</option>
-								<option value="7" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >entre 5h00 et 5h20</option>
-								<option value="8" <?php if($profile['time_marathon'] == '0') {echo 'selected' ; } ?> >+5h20</option>
+								<option value="1" <?php if($profile['time_marathon'] == '1') {echo 'selected' ; } ?> >-3h00</option>
+								<option value="2" <?php if($profile['time_marathon'] == '2') {echo 'selected' ; } ?> >entre 3h00 et 3h20</option>
+								<option value="3" <?php if($profile['time_marathon'] == '3') {echo 'selected' ; } ?> >entre 3h20 et 3h40</option>
+								<option value="4" <?php if($profile['time_marathon'] == '4') {echo 'selected' ; } ?> >entre 3h40 et 4h00</option>
+								<option value="5" <?php if($profile['time_marathon'] == '5') {echo 'selected' ; } ?> >entre 4h20 et 4h40</option>
+								<option value="6" <?php if($profile['time_marathon'] == '6') {echo 'selected' ; } ?> >entre 4h40 et 5h00</option>
+								<option value="7" <?php if($profile['time_marathon'] == '7') {echo 'selected' ; } ?> >entre 5h00 et 5h20</option>
+								<option value="8" <?php if($profile['time_marathon'] == '8') {echo 'selected' ; } ?> >+5h20</option>
 							</select>
 						</div>
 
 						<div class="form-group form-group-runProfile TODO">
 							<p><strong>TODO :</strong>
-								</br>- photo de profil s efface si on met a jour le profil sans charger une nouvelle photo								
-								</br>- enregistrer toutes les langues selectionnees en bdd (seulement un choix est sauvegardé pour le moment)
+								</br>- photo de profil s efface si on met a jour le profil sans charger une nouvelle photo		
 							</p>
 						</div>
 

@@ -45,7 +45,13 @@ class ProfileController extends Controller
 		//echo date_format($date, 'F Y') . '</br>';
 		//print_r($profile);
 
-		$languages = explode(',', $profile['language']);
+		$language_fr = explode(',', $profile['language_fr']);
+		$language_en = explode(',', $profile['language_en']);
+		$language_es = explode(',', $profile['language_es']);
+		$language_it = explode(',', $profile['language_it']);
+		$language_de = explode(',', $profile['language_de']);
+		$language_pt = explode(',', $profile['language_pt']);
+
 
 		// $blablarun = 'pas du tout';
 		// if ($profile['blablarun'] == 1) {
@@ -55,7 +61,8 @@ class ProfileController extends Controller
 		// 	$blablarun = 'beaucoup';
 		// }
 
-		if (isset($blablarun)) {			
+					
+		$blablarun = '';
 			if ($profile['blablarun'] == 0) {
 				$blablarun = 'pas du tout';
 			}
@@ -64,10 +71,7 @@ class ProfileController extends Controller
 			}
 			if ($profile['blablarun'] == 2) {
 				$blablarun = 'beaucoup';
-			}
-
-		} else
-		$blablarun = '';
+			}	
 
 
 		switch ($profile['time_10km']) {
@@ -191,7 +195,12 @@ class ProfileController extends Controller
 		}
 
 		$this->show('profile/view', [	'profile' => $profile, 
-										'languages' => $languages, 
+										'language_fr' => $language_fr, 
+										'language_en' => $language_en, 
+										'language_es' => $language_es, 
+										'language_it' => $language_it, 
+										'language_de' => $language_de, 
+										'language_pt' => $language_pt, 
 										'blablarun' => $blablarun
 									]);
 

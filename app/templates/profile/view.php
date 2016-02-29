@@ -7,7 +7,9 @@
 		<h1 class="text-center">Profil</h1>
 	</div>
 
-<?php debug($profile['language']); ?>
+<?php debug($profile['profile_picture']); ?>
+	
+
 	<!-- Afficher le profil de l utilisateur -->
 	<div class="container">
 		<div class="row view">
@@ -43,12 +45,13 @@
 			</div>
 
 			<div class="col-md-6">
-
-				<h2>Bonjour, je m'appelle <?=  ucfirst($profile['firstname']) ?> <?= ucfirst($profile['lastname']) ?> !</h2>
-				
 				<?php if ($w_user['id'] == $profile['user_id']) : ?>
 					<a href="<?= $this->url('updateProfile') ?>"><i class="fa fa-edit i-view"></i>Modifier mon profil</a>
 				<?php endif; ?>
+
+				<h2>Bonjour, je m'appelle <?=  ucfirst($profile['firstname']) ?> <?= ucfirst($profile['lastname']) ?> !</h2>
+				
+				
 
 				<h3><?= ucfirst($profile['home_town']) ?>, <?= strtoupper($profile['home_country']) ?> 
 				- Membre depuis <?= date('F Y', strtotime($profile['created_at'])) ?></h3>
@@ -56,11 +59,11 @@
 				<p><?= $profile['description'] ?></p>
 
 				<p>Pendant la course, je parle : <?= $blablarun ?></p>
+			
 
-				<h3>Langues parlées :</h3>
-				<p><?php foreach ($languages as $language) : ?>
-						<?php echo $language ?>
-				<?php endforeach; ?></p>
+				<h3>Langues parlées :</h3> <p><?= $profile['language_fr'] ?> <?= $profile['language_en'] ?> <?= $profile['language_es'] ?>
+											<?= $profile['language_it'] ?> <?= $profile['language_de'] ?> <?= $profile['language_pt'] ?> </p>
+
 
 				<h3>Mes exploits :</h3>
 				<p>10 km : <?= $profile['time_10km'] ?></p>
@@ -70,7 +73,6 @@
 
 			<div class="form-group form-group-runProfile TODO">
 				<p><strong>TODO :</strong>
-					</br>- recuperer toutes les langues selectionnees en bdd (seulement un choix est sauvegardé pour le moment)
 					</br>- recuperer le nb de run deja effectues par le membre
 					</br>- afficher les 3 prochains runs du membre					
 				</p>

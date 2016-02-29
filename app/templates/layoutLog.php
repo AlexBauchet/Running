@@ -76,11 +76,19 @@
 
 		<!-- message de conf ou d'erreur en Session -->
 		<?php if(isset($_SESSION['message'])) : ?>
-			<div class="alert alert-danger msgSession">
+			<div class="alert alert-success msgSession">
 				<?= $_SESSION['message']; ?>
 				<?php unset($_SESSION['message']); ?>
 			</div>
 		<?php endif; ?>
+		<!-- 
+			<?php if(isset($_SESSION['error'])) : ?>
+			<div class="alert alert-success msgSession">
+				<?= $_SESSION['error']; ?>
+				<?php unset($_SESSION['error']); ?>
+			</div>
+		<?php endif; ?>
+		 -->
 
 
 		<?= $this->section('main_content') ?>

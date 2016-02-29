@@ -64,7 +64,7 @@
 
 		<!-- message de conf apres deconnexion -->
 		<?php if(isset($_SESSION['message'])): ?>
-			<div class="alert alert-danger msgSession">
+			<div class="alert alert-success msgSession">
 				<p><?= $_SESSION['message'] ?></p>
 				<?php unset($_SESSION['message']); ?>
 			</div>

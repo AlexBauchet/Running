@@ -42,7 +42,12 @@ class UpdateProfileController extends Controller
 		$home_country = trim(htmlentities($_POST['home_country']));
 		$description = trim(htmlentities($_POST['description']));
 		$blablarun = $_POST['blablarun'];
-		$language = $_POST['language'];
+		$language_fr = $_POST['language_fr'];
+		$language_en = $_POST['language_en'];
+		$language_es = $_POST['language_es'];
+		$language_it = $_POST['language_it'];
+		$language_de = $_POST['language_de'];
+		$language_pt = $_POST['language_pt'];
 		$time_10km = trim(htmlentities($_POST['time_10km']));
 		$time_20km = trim(htmlentities($_POST['time_20km']));
 		$time_half = trim(htmlentities($_POST['time_half']));
@@ -108,7 +113,12 @@ class UpdateProfileController extends Controller
 				'home_country' => $home_country,
 				'description' => $description,
 				'blablarun' => $blablarun,
-				'language' => $language,
+				'language_fr' => $language_fr,
+				'language_en' => $language_en,
+				'language_es' => $language_es,
+				'language_it' => $language_it,
+				'language_de' => $language_de,
+				'language_pt' => $language_pt,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
 				'time_half' => $time_half,
@@ -128,7 +138,12 @@ class UpdateProfileController extends Controller
 				'home_country' => $home_country,
 				'description' => $description,
 				'blablarun' => $blablarun,
-				'language' => $language,
+				'language_fr' => $language_fr,
+				'language_en' => $language_en,
+				'language_es' => $language_es,
+				'language_it' => $language_it,
+				'language_de' => $language_de,
+				'language_pt' => $language_pt,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
 				'time_half' => $time_half,
@@ -138,18 +153,63 @@ class UpdateProfileController extends Controller
 				'user_id' => $userId['id'],
 				]); 
 		}
-	
-		if($resultProfile) {
-			$_SESSION['message'] = "Vos modifications ont bien été enregistrées.";
-			// $this->redirectToRoute('viewProfile', ['id' => $resultProfile['id']]);
-			$this->redirectToRoute('viewProfile', ['id' => $userId['id']]);			
-		}
-		else {
-			$_SESSION['message'] = "Une erreur est intervenue. Vos mises à jour n'ont pas été enregistrées.";
+
+		// Check ma soumission du formulaire
+	if(isset($_POST['action'])) {
+		echo "<pre>";
+		print_r($_POST);
+		echo "</pre>";
+
+		echo "<pre>";
+		print_r($_FILES);
+		echo "</pre>";
+
+		// 1. Faire un echo de la taille du fichier envoyer
+		echo "Le poids du fichier est :".$_FILES['profile_picture']['size'];
+
+		// 2. Affichier le type de l'image
+		echo "Le type d'image est :".$_FILES['profile_picture']['type'];
+
+		// 4. Checker le type de fichier d'image
+		// 5.
+		$uploadFileName = $_FILES['profile_picture']['name'];
+		$uploadFileType = $_FILES['profile_picture']['type'];
+		$uploadFileSize = $_FILES['profile_picture']['size'];
+		if(!strstr($uploadFileType, 'jpg')&& !strstr($uploadFileType, 'jpeg') && !strstr($uploadFileType, 'gif')) {
+			echo "ERREUR - Le fichier n'est pas une image au format web";
+
 		}
 
-		$this->show('profile/updateProfile', ['errors' => $errors]);
-		//$this->redirectToRoute('viewProfile', ['id' => $resultProfile['id'],'success' => $success, 'errors' => $errors]);
+		// 6. Checker que le poids max est < 10000000
+
+		elseif ($uploadFileSize > 10000000) {
+			echo "ERREUR - Le fichier dépasse le poids max";
+		}
+
+		 
+		// 3. Déplacer l'image upload
+		elseif (move_uploaded_file($_FILES['profile_picture']['tmp_name'], './img/'.$_FILES['profile_picture']['name'])) {
+			 echo "Votre image a bien été chargé !";
+
+		}
+
+	  else {
+	  		echo "ERREUR - Votre image n'a pas été uploadé correctement";
+	  }
+
+	}
+	
+	if($resultProfile) {
+		$_SESSION['message'] = "Vos modifications ont bien été enregistrées.";
+		// $this->redirectToRoute('viewProfile', ['id' => $resultProfile['id']]);
+		$this->redirectToRoute('viewProfile', ['id' => $userId['id']]);			
+	}
+	else {
+		$_SESSION['error'] = "Une erreur est intervenue. Vos mises à jour n'ont pas été enregistrées.";
+	}
+
+	$this->show('profile/updateProfile', ['errors' => $errors]);
+	//$this->redirectToRoute('viewProfile', ['id' => $resultProfile['id'],'success' => $success, 'errors' => $errors]);
 
 	}
 	
