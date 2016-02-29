@@ -24,7 +24,7 @@ class ProfileController extends Controller
 	{
 		// on recupere en bdd l objet en fonction du profil id
 		$profileManager = new ProfileManager();
-		$profile = $profileManager->find($id);
+		$profile = $profileManager->findByUserId($id);
 
 		// echo $profile['created_at'] . '</br>';
 		// echo gettype($profile['created_at']) . '</br>';
