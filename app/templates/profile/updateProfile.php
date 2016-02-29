@@ -7,7 +7,6 @@
 	<h1 class="text-center">Modifier mon profil</h1>
 </div>
 
-<?php debug($profile['profile_picture']); ?>
 
 <!-- Afficher le profil de l utilisateur -->
 <div class="container">
@@ -21,8 +20,7 @@
 			<div class="col-md-5">
 				<div class="form-group form-group-updateProfile">
 					<label class="inputCreateRun" for="profile_picture">Charger une nouvelle photo de profil</label>
-					<input id="profile_picture" name="profile_picture" type="file" placeholder="Importer une photo" class="form-control" <?php if($profile['profile_picture']) {echo 'selected' ; } ?>>
-					<input id="profile_picture" name="profile_picture" type="text" placeholder="Importer une photo" class="form-control" <?php if($profile['profile_picture']) {echo 'selected' ; } ?>>
+					<input id="profile_picture" name="profile_picture" type="file" placeholder="Importer une photo" class="form-control" >					
 				</div>				
 
 				<div class="form-group form-group-updateProfile">
@@ -164,12 +162,6 @@
 								<option value="7" <?php if($profile['time_marathon'] == '7') {echo 'selected' ; } ?> >entre 5h00 et 5h20</option>
 								<option value="8" <?php if($profile['time_marathon'] == '8') {echo 'selected' ; } ?> >+5h20</option>
 							</select>
-						</div>
-
-						<div class="form-group form-group-runProfile TODO">
-							<p><strong>TODO :</strong>
-								</br>- photo de profil s efface si on met a jour le profil sans charger une nouvelle photo		
-							</p>
 						</div>
 
 					</div>

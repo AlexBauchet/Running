@@ -6,8 +6,6 @@
 	<div class="container">
 		<h1 class="text-center">Profil</h1>
 	</div>
-
-<?php debug($profile['profile_picture']); ?>
 	
 
 	<!-- Afficher le profil de l utilisateur -->
@@ -21,7 +19,7 @@
 			<div class="col-md-4">
 			
 				<div class="photo-profil">
-					<img src="/uploads/<?= $profile['profile_picture'] ?>" alt="Photo de profil" width="300" height="200">
+					<img src="../../../uploads/<?= $profile['profile_picture'] ?>" alt="Photo de profil" width="300" height="200">
 				</div>
 
 				<div class="nbRuns">

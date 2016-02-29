@@ -28,7 +28,7 @@ class UpdateProfileController extends Controller
 	}
 
 	public function emailExists($email) {
-		debug($email);
+		// debug($email);
 	}
 
 
@@ -70,13 +70,16 @@ class UpdateProfileController extends Controller
 		// 
 		$profile_picture = $profile['profile_picture'];
 
+			// debug($_FILES);
+			// die;
+
 		// verif si un objet va etre uploadé
 		if(isset($_FILES)) {
 			$uploadFileName = $_FILES['profile_picture']['name'];
 			$uploadFileType = $_FILES['profile_picture']['type'];
 			$uploadFileSize = $_FILES['profile_picture']['size'];
 
-			if(!strstr($uploadFileType, 'jpg')&& !strstr($uploadFileType, 'jpeg') && !strstr($uploadFileType, 'gif')) {
+			if(!strstr($uploadFileType, 'jpg')&& !strstr($uploadFileType, 'jpeg') && !strstr($uploadFileType, 'gif') && !strstr($uploadFileType, 'png') ) {
 				$errors['profile_picture']= "ERREUR - Le fichier n'est pas une image au format web";
 
 			}
@@ -91,12 +94,18 @@ class UpdateProfileController extends Controller
 				$errors['profile_picture']= "Votre image a bien été chargé !";
 
 				$profile_picture = $_FILES['profile_picture']['name'];
+
 			}
 
 			else {
 				$errors['profile_picture']= "ERREUR - Votre image n'a pas été uploadé correctement";
 			}
 		}
+
+		// debug($_FILES);
+		// debug($errors);
+		// echo $profile_picture;
+		
 
 
 		// objet datetime
@@ -164,10 +173,11 @@ class UpdateProfileController extends Controller
 		print_r($_FILES);
 		echo "</pre>";
 
+
 		// 1. Faire un echo de la taille du fichier envoyer
 		echo "Le poids du fichier est :".$_FILES['profile_picture']['size'];
 
-		// 2. Affichier le type de l'image
+		// 2. Afficher le type de l'image
 		echo "Le type d'image est :".$_FILES['profile_picture']['type'];
 
 		// 4. Checker le type de fichier d'image
