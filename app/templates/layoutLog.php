@@ -43,7 +43,7 @@
 
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="TODO">Corriger redirection vers le bon profil</li>
+					<!-- <li class="TODO">Corriger redirection vers le bon profil</li> -->
 					<li><a href="<?= $this->url('viewProfile', ['id' => $w_user['id']]) ?>"><?= $w_user['email']; ?></a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user fa-1x"></i><span class="caret"></span></a>
