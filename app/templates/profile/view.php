@@ -43,13 +43,13 @@
 
 			<div class="col-md-6">
 
-				<h2>Bonjour, je m'appelle <?= $profile['firstname'] ?> !</h2>
+				<h2>Bonjour, je m'appelle <?= $profile['firstname'] ?> <?= $profile['lastname'] ?> !</h2>
 				
 				<?php if ($w_user['id'] == $profile['user_id']) : ?>
 					<a href="<?= $this->url('updateProfile') ?>"><i class="fa fa-edit i-view"></i>Modifier mon profil</a>
 				<?php endif; ?>
 
-				<h3><?= $profile['home_town'] ?>, <?= $profile['home_country'] ?> 
+				<h3><?= $profile['home_town'] ?>, <?= ucfirst($profile['home_country']) ?> 
 				- Membre depuis <?= date('F Y', strtotime($profile['created_at'])) ?></h3>
 				
 				<p><?= $profile['description'] ?></p>

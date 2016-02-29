@@ -141,7 +141,8 @@ class UpdateProfileController extends Controller
 	
 		if($resultProfile) {
 			$_SESSION['message'] = "Vos modifications ont bien été enregistrées.";
-			$this->redirectToRoute('viewProfile', ['id' => $resultProfile['id']]);
+			// $this->redirectToRoute('viewProfile', ['id' => $resultProfile['id']]);
+			$this->redirectToRoute('viewProfile', ['id' => $userId['id']]);			
 		}
 		else {
 			$_SESSION['message'] = "Une erreur est intervenue. Vos mises à jour n'ont pas été enregistrées.";

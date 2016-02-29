@@ -7,10 +7,12 @@
 	<h1 class="text-center">Modifier mon profil</h1>
 </div>
 
+<?php debug($profile) ?>
+
 <!-- Afficher le profil de l utilisateur -->
 <div class="container">
 
-	<form method="POST" enctype="multipart/form-data" action="<?= $this->url('updateProfileSubmit'); ?>">
+	 <form method="POST" enctype="multipart/form-data" action="<?= $this->url('updateProfileSubmit'); ?>">
 
 		<div class="row">
 
@@ -34,12 +36,21 @@
 					
 				<div class="form-group form-group-updateProfile">
 					<p>Je suis : </p>
+					<!-- <select class="form-control selectGender" name="gender" <?php if(isset($profile['gender'])) echo$profile['gender'] ?>> -->
 					<select class="form-control selectGender" name="gender">
 						<option value="2">sélectionner un genre</option>
-						<option value="0">un homme</option>
-						<option value="1">une femme</option>
+						<option value="0 <?php if($_GET['gender'] == '0') { echo 'selected';} ?>">un homme</option>
+						<option value="1 <?php if($_GET['gender'] == '1') { echo 'selected';} ?>">une femme</option>
+						<!-- <option value="1">une femme</option> -->
 					</select>
 				</div>
+
+				<!-- <select name="up_opt">
+				    <option value="1" <?php if ($_GET['up_opt'] == 1) { echo ' selected="selected"'; } ?>>Opt1</option> -->
+
+				
+
+
 
 				<div class="form-group form-group-updateProfile">
 					<label class="inputCreateRun" for="home_town">Ville de résidence</label>

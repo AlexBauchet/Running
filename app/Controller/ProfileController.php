@@ -5,6 +5,7 @@ namespace Controller;
 use \W\Controller\Controller;
 use \Manager\ProfileManager;
 
+
 class ProfileController extends Controller
 {
 	// /* Page View */
@@ -46,13 +47,28 @@ class ProfileController extends Controller
 
 		$languages = explode(',', $profile['language']);
 
-		$blablarun = 'pas du tout';
-		if ($profile['blablarun'] == 1) {
-			$blablarun = 'un peu';
-		}
-		if ($profile['blablarun'] == 2) {
-			$blablarun = 'beaucoup';
-		}
+		// $blablarun = 'pas du tout';
+		// if ($profile['blablarun'] == 1) {
+		// 	$blablarun = 'un peu';
+		// }
+		// if ($profile['blablarun'] == 2) {
+		// 	$blablarun = 'beaucoup';
+		// }
+
+		if (isset($blablarun)) {			
+			if ($profile['blablarun'] == 0) {
+				$blablarun = 'pas du tout';
+			}
+			if ($profile['blablarun'] == 1) {
+				$blablarun = 'un peu';
+			}
+			if ($profile['blablarun'] == 2) {
+				$blablarun = 'beaucoup';
+			}
+
+		} else
+		$blablarun = '';
+
 
 		switch ($profile['time_10km']) {
 				case 0 : 
@@ -174,7 +190,10 @@ class ProfileController extends Controller
 					break;
 		}
 
-		$this->show('profile/view', ['profile' => $profile, 'languages' => $languages, 'blablarun' => $blablarun]);
+		$this->show('profile/view', [	'profile' => $profile, 
+										'languages' => $languages, 
+										'blablarun' => $blablarun
+									]);
 
 	}
 
