@@ -163,6 +163,14 @@ footer {
 	text-align: center;	
 }
 
+#mapSeekRun {
+	width: 80%;
+	height: 500px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .mapsSeekRunMargin {
 	margin-bottom: 40px;
 }
@@ -274,13 +282,6 @@ input[type="range"]::-webkit-slider-thumb {
     color: #000;  
 }
 
-#mapSeekRun {
-	width: 80%;
-	height: 500px;
-	margin-bottom: 30px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
 
 /* ==========================================================================
@@ -297,6 +298,14 @@ input[type="range"]::-webkit-slider-thumb {
 
 .runProfile {
 	margin-bottom: 40px;
+}
+
+#mapRunProfile {
+	width: 80%;
+	height: 450px;
+	margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 

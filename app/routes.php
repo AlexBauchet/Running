@@ -15,6 +15,7 @@
 		['GET', '/seekrun', 'Run#seekrun', 'seekrun'],
 
 		['GET', '/runProfile/[:id]', 'Run#runProfile', 'runProfile'],
+		['GET', '/joinRun/[:id]', 'Run#joinRun', 'joinRun'],		
 
 		['GET', '/profile/view/[:id]', 'Profile#view', 'viewProfile'],
 		['GET', '/profile/updateProfile', 'UpdateProfile#updateProfile', 'updateProfile'],

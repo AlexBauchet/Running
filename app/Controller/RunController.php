@@ -4,6 +4,7 @@ namespace Controller;
 
 use \W\Controller\Controller;
 use \Manager\RunningManager;
+use \Manager\User_runningManager;
 
 class RunController extends Controller
 {
@@ -40,7 +41,7 @@ class RunController extends Controller
 		$runningManager = new RunningManager();
 		$run = $runningManager->findWithUser($id);
 
-		//debug($run);
+		debug($run);
 
 		if ($run) {
 
@@ -122,9 +123,46 @@ class RunController extends Controller
 			$this->show('run/runProfile', ['run' => $run]);
 		}
 		else {
-			// page erreur 404
+			$this->show('w_errors/404');
 		}
 		
+	}
+
+
+	/* Page joinRun */
+	public function joinRun($id)
+	{	
+		// securise la page
+		$this->allowTo('member');
+
+		// recuperation de l user en session
+		$userId = $this->getUser();
+		// debug($userId);
+
+		// test que l id envoyé en parametre correspond bien a un run existant
+		$runningManager = new RunningManager();
+		$run = $runningManager->find($id);
+
+		if($run) {
+
+			// instanciation d un objet de type User_runningManager
+			$user_runningManager = new User_runningManager;
+
+			// test que l user ne participe pas deja a la course
+			$participation = $user_runningManager->findWithUserAndRun($userId['id'], $run['id']);
+
+			if ($participation) {
+				echo "Vous êtes déjà enregistré pour cette course.";
+			}
+			else {
+				$allRuns = $user_runningManager->insert(['user_id' => $userId['id'], 'running_id' => $run['id']]);
+				$this->redirectToRoute('runProfile', ['id' => $run['id']]);
+			}	
+		}
+		else {
+			$this->show('w_errors/404');
+		}
+
 	}
 
 

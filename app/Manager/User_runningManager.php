@@ -3,7 +3,7 @@ namespace Manager;
 
 use \W\Manager\Manager;
 
-class RunningManager extends Manager 
+class User_runningManager extends Manager
 {
 
 	public function findWithUser($id) {
@@ -20,15 +20,16 @@ class RunningManager extends Manager
 		return $sth->fetch();		
 	}
 
-	public function runParticipants($id) {
+	public function findWithUserAndRun($userId, $runningId) {
 		
-		if (!is_numeric($id)){
+		if (!is_numeric($userId) || !is_numeric($runningId)){
 			return false;
 		}
 
-		$sql = "SELECT runnings.*, profiles.firstname, profiles.id as profile_id FROM " . $this->table . " INNER JOIN profiles ON runnings.user_id = profiles.user_id WHERE runnings.id = :id LIMIT 1";
+		$sql = "SELECT * FROM " . $this->table . " WHERE running_id = :runningId AND user_id = :userId LIMIT 1";
 		$sth = $this->dbh->prepare($sql);
-		$sth->bindValue(":id", $id);
+		$sth->bindValue(":userId", $userId);
+		$sth->bindValue(":runningId", $runningId);
 		$sth->execute();
 
 		return $sth->fetch();		
@@ -36,4 +37,3 @@ class RunningManager extends Manager
 
 
 }
-

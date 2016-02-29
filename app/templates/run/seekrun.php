@@ -144,16 +144,6 @@
 			<?php endforeach; ?>
 		}
 
-		// function attachMessage(marker, messageInfoWindow) {
-		// 	var infowindow = new google.maps.InfoWindow({
-		// 		content: messageInfoWindow
-		// 	});
-
-		// 	marker.addListener('click', function() {
-		// 		infowindow.open(marker.get('map'), marker);
-		// 	});
-		// }
-
 	</script>
 
 
