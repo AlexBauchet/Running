@@ -50,14 +50,12 @@
 				<h2>Bonjour, je m'appelle <?=  ucfirst($profile['firstname']) ?> <?= ucfirst($profile['lastname']) ?> !</h2>
 				
 				
-
 				<h3><?= ucfirst($profile['home_town']) ?>, <?= strtoupper($profile['home_country']) ?> 
 				- Membre depuis <?= date('F Y', strtotime($profile['created_at'])) ?></h3>
 				
 				<p><?= $profile['description'] ?></p>
 
-				<p>Pendant la course, je parle : <?= $blablarun ?></p>
-			
+				<p>Pendant la course, je parle : <?= $blablarun ?></p>			
 
 				<h3>Langues parlées :</h3> <p><?= $profile['language_fr'] ?> <?= $profile['language_en'] ?> <?= $profile['language_es'] ?>
 											<?= $profile['language_it'] ?> <?= $profile['language_de'] ?> <?= $profile['language_pt'] ?> </p>

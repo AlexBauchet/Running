@@ -20,7 +20,8 @@ class UpdateProfileController extends Controller
 
 		$profileManager = new ProfileManager();
 
-		$profile = $profileManager->findByUserId($loggedUser['id']);
+		// $profile = $profileManager->findByUserId($loggedUser['id']);
+		$profile = $profileManager->find($loggedUser['id']);
 
 		// print_r($profile);
 

@@ -81,7 +81,6 @@
     ====================================================================== -->
 
 	<footer>
-
 		<div class="container">
 			<div class="row">
 
@@ -124,9 +123,7 @@
 			</div>	
 		</div>
 
-
 		<!-- SCRIPTS -->
-
 		<script src="<?= $this->assetUrl('js/vendor/jquery-1.11.2.min.js') ?>"></script>
 
 		<script src="<?= $this->assetUrl('js/vendor/bootstrap.min.js') ?>"></script>
