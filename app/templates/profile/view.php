@@ -7,6 +7,7 @@
 		<h1 class="text-center">Profil</h1>
 	</div>
 
+<?php debug($profile['language']); ?>
 	<!-- Afficher le profil de l utilisateur -->
 	<div class="container">
 		<div class="row view">
@@ -43,13 +44,13 @@
 
 			<div class="col-md-6">
 
-				<h2>Bonjour, je m'appelle <?= $profile['firstname'] ?> <?= $profile['lastname'] ?> !</h2>
+				<h2>Bonjour, je m'appelle <?=  ucfirst($profile['firstname']) ?> <?= ucfirst($profile['lastname']) ?> !</h2>
 				
 				<?php if ($w_user['id'] == $profile['user_id']) : ?>
 					<a href="<?= $this->url('updateProfile') ?>"><i class="fa fa-edit i-view"></i>Modifier mon profil</a>
 				<?php endif; ?>
 
-				<h3><?= $profile['home_town'] ?>, <?= ucfirst($profile['home_country']) ?> 
+				<h3><?= ucfirst($profile['home_town']) ?>, <?= strtoupper($profile['home_country']) ?> 
 				- Membre depuis <?= date('F Y', strtotime($profile['created_at'])) ?></h3>
 				
 				<p><?= $profile['description'] ?></p>
@@ -71,8 +72,7 @@
 				<p><strong>TODO :</strong>
 					</br>- recuperer toutes les langues selectionnees en bdd (seulement un choix est sauvegardé pour le moment)
 					</br>- recuperer le nb de run deja effectues par le membre
-					</br>- afficher les 3 prochains runs du membre
-					</br>- mettre en majuscules la 1ere lettre pour firstname, city et country
+					</br>- afficher les 3 prochains runs du membre					
 				</p>
 			</div>
 

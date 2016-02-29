@@ -42,7 +42,7 @@ class UpdateProfileController extends Controller
 		$home_country = trim(htmlentities($_POST['home_country']));
 		$description = trim(htmlentities($_POST['description']));
 		$blablarun = $_POST['blablarun'];
-		//$language = $_POST['langues'];
+		$language = $_POST['language'];
 		$time_10km = trim(htmlentities($_POST['time_10km']));
 		$time_20km = trim(htmlentities($_POST['time_20km']));
 		$time_half = trim(htmlentities($_POST['time_half']));
@@ -108,7 +108,7 @@ class UpdateProfileController extends Controller
 				'home_country' => $home_country,
 				'description' => $description,
 				'blablarun' => $blablarun,
-				//'language' => $language,
+				'language' => $language,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
 				'time_half' => $time_half,
@@ -128,7 +128,7 @@ class UpdateProfileController extends Controller
 				'home_country' => $home_country,
 				'description' => $description,
 				'blablarun' => $blablarun,
-				//'language' => $language,
+				'language' => $language,
 				'time_10km' => $time_10km,
 				'time_20km' => $time_20km,
 				'time_half' => $time_half,
